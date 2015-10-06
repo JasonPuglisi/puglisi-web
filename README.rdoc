@@ -1,0 +1,9 @@
+= Puglisi Web
+Jason Puglisi's personal website.
+
+{puglisi.im}[https://www.puglisi.im/]
+
+== Goals
+* Provide contact and other relevant information
+* Display completed and in-progress projects
+
