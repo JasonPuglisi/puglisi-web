@@ -24,8 +24,8 @@ Project.create(title: 'FITspiration', description: 'FITspiration is a simulated
 Project.create(title: 'Build Your Own Craving', description: 'Build Your Own
   Craving is a simulated snack and catering company at Robbinsville High
   School', image: 'build-your-own-craving.png', links: { 'github' =>
-  'https://github.com/JasonPuglisi/build-your-own-craving-website',
-  kind: 'website'}
+  'https://github.com/JasonPuglisi/build-your-own-craving-website'},
+  kind: 'website')
 
 # [Utility] Snow IRC Bot
 
