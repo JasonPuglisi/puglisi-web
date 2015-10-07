@@ -66,6 +66,7 @@
       'pebble watchface' => 'Pebble Watchfaces'}
     sections.each do |section, title|
       projects = @projects.where(kind: section)
+      count = 0
   %>
     <div class="row">
       <div class="col-sm-12 pull-right">
@@ -75,7 +76,16 @@
       </div>
     </div>
     <div class="row">
-      <% projects.each do |project| %>
+      <%
+        projects.each do |project|
+          if count > 0 && count % 2 == 0
+      %>
+          </div>
+          <div class="row">
+      <%
+          end
+          count += 1
+      %>
         <div class="col-sm-6">
           <div class="row">
             <div class="col-md-10 col-lg-8 pull-right">
