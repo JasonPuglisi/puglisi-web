@@ -1,9 +1,5 @@
-= Puglisi Web
-Jason Puglisi's personal website.
-
-{puglisi.im}[https://www.puglisi.im/]
-
-== Goals
-* Provide contact and other relevant information
-* Display completed and in-progress projects
+= puglisi;web
+My (Jason Puglisi) personal website. Used to provide some information about me
+and show off the differen't stuff I've worked on.
+{https://www.puglisi.im/}[https://www.puglisi.im/]
 
