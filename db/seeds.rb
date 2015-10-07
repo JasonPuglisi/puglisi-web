@@ -13,6 +13,12 @@ Project.create(title: 'Rville Spirit', description: 'Rville Spirit is
   kind: 'website')
 
 # [Website] FITspiration - https://www.findanewmax.com/
+Project.create(title: 'FITspiration', description: 'FITspiration is a simulated
+  health and fitness company at Robbinsville High School',
+  image: 'fitspiration.png', links: {
+  'web' => 'https://www.findanewmax.com/',
+  'github' => 'https://github.com/JasonPuglisi/fitspiration-website'},
+  kind: 'website')
 
 # [Website] Build Your Own Craving
 

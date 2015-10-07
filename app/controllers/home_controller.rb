@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @websites = Project.where(kind: 'website')
+    @projects = Project.all
   end
 end
 
