@@ -1,6 +1,6 @@
 /* line 1, /var/www/puglisi.im/puglisi-web/app/assets/stylesheets/application.scss */
 .bg-home {
-  background-image: url("/assets/bg-home-e0ada20986d347cae03013260632edee9492167e711a96ad30c2d32699905b2d.jpg");
+  background-image: url(/assets/bg-home-e0ada20986d347cae03013260632edee9492167e711a96ad30c2d32699905b2d.jpg);
 }
 /*!
  * Bootstrap v4.0.0-alpha (http://getbootstrap.com)

@@ -1,9 +1,9 @@
 <% content_for :title, "Jason Puglisi" %>
 
-<div class="bg-home bg-inverse text-inverse">
+<div class="bg-home bg-inverse text-inverse text-right">
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <div class="row text-right">
+      <div class="row">
         <div class="col-sm-6 col-lg-4">
           <h1 class="display-4">Jason Puglisi</h1>
           <br>
@@ -56,6 +56,58 @@
           </p>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-right">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 pull-right">
+        <h1>Websites</h1>
+        <hr>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <% @websites.each do |website| %>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-md-10 col-lg-8 pull-right">
+              <img src="<%= asset_path 'projects/' + website.image %>"
+                class="img-responsive" width="100%" alt="<%= website.title %>">
+              <br>
+              <br>
+            </div>
+          </div>
+          <h2><%= website.title %></h2>
+          <p>
+          <%
+            links = eval(website.links)
+
+            link_icons = {'web' => 'globe', 'github' => 'github'}
+            link_names = {'web' => 'Website', 'github' => 'GitHub'}
+
+            links.each do |name, link|
+              if link_icons.key?(name)
+                icon = link_icons[name]
+              else
+                icon = 'link'
+              end
+
+              if link_names.key?(name)
+                name = link_names[name]
+              else
+                name = kind.capitalize
+              end
+          %>
+            <i class="fa fa-<%= icon %>"></i>
+            <a href="<%= link %>"><%= name %></a>
+          <% end %>
+          </p>
+          <p><%= website.description %></p>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
