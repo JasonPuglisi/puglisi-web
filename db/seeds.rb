@@ -28,6 +28,10 @@ Project.create(title: 'Build Your Own Craving', description: 'Build Your Own
   kind: 'website')
 
 # [Utility] Snow IRC Bot
+Project.create(title: 'Snow IRC Bot', description: 'Snow IRC Bot is an internet
+  relay chat bot that performs a wide range of both useful and fun functions',
+  image: 'snow-irc-bot.png', links: {
+  'github' => 'https://github.com/JasonPuglisi/snow-irc-bot'}, kind: 'utility')
 
 # [Utility] MyPKS API
 
