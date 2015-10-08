@@ -23,7 +23,7 @@ Project.create(title: 'FITspiration', description: 'FITspiration is a simulated
 # [Website] Build Your Own Craving
 Project.create(title: 'Build Your Own Craving', description: 'Build Your Own
   Craving is a simulated snack and catering company at Robbinsville High
-  School', image: 'build-your-own-craving.png', links: { 'github' =>
+  School', image: 'build-your-own-craving.png', links: {'github' =>
   'https://github.com/JasonPuglisi/build-your-own-craving-website'},
   kind: 'website')
 
@@ -34,8 +34,17 @@ Project.create(title: 'Snow IRC Bot', description: 'Snow IRC Bot is an internet
   'github' => 'https://github.com/JasonPuglisi/snow-irc-bot'}, kind: 'utility')
 
 # [Utility] MyPKS API
+Project.create(title: 'MyPKS API', description: 'MyPKS API is an unofficial API
+  that provides a convenient way of accessing Six Flags work schedule
+  information', image: 'mypks-api.png', links: {
+  'github' => 'https://github.com/JasonPuglisi/mypks-api'}, kind: 'utility')
 
 # [Utility] Plug.dj Scrobbler
+Project.create(title: 'Plug.dj Scrobbler', description: 'Plug.dj Scrobbler is
+  is a Firefox add-on that scrobbles track plays from the now-retired Plug.dj
+  to Last.fm', image: 'plugdj-scrobbler.png', links: {
+  'github' => 'https://github.com/JasonPuglisi/plugdj-scrobbler'},
+  kind: 'utility')
 
 # [Pebble Watchface] Helvetica Text
 
