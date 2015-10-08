@@ -101,8 +101,10 @@
           <%
             links = eval(project.links)
 
-            link_icons = {'web' => 'globe', 'github' => 'github'}
-            link_names = {'web' => 'Website', 'github' => 'GitHub'}
+            link_icons = {'web' => 'globe', 'github' => 'github',
+              'pebble' => 'search', 'pebble-dl' => 'download'}
+            link_names = {'web' => 'Website', 'github' => 'GitHub',
+              'pebble' => 'Pebble Web', 'pebble-dl' => 'Pebble App'}
 
             links.each do |name, link|
               if link_icons.key?(name)
@@ -114,7 +116,7 @@
               if link_names.key?(name)
                 name = link_names[name]
               else
-                name = kind.capitalize
+                name = name.capitalize
               end
           %>
             <i class="fa fa-<%= icon %>"></i>

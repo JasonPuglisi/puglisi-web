@@ -47,6 +47,21 @@ Project.create(title: 'Plug.dj Scrobbler', description: 'Plug.dj Scrobbler is
   kind: 'utility')
 
 # [Pebble Watchface] Helvetica Text
+Project.create(title: 'Helvetica Text', description: 'Helvetica Text is a
+  simple and clean watchface for the original Pebble smartwatches that\'s easy
+  on the eyes and the battery', image: 'helvetica-text.png', links: {
+  'pebble' =>
+  'https://apps.getpebble.com/applications/53852972740f95161d000184',
+  'pebble-dl' => 'pebble://appstore/53852972740f95161d000184',
+  'github' => 'https://github.com/JasonPuglisi/helvetica-text'},
+  kind: 'pebble watchface')
 
 # [Pebble Watchface] Slammin' Watchface
-
+Project.create(title: 'Slammin\' Watchface', description: 'Slammin\' Watchface
+  is a fun watchface for the original Pebble smartwatches that reminds you
+  when it\'s time to get hype and when it\'s time to slam',
+  image: 'slammin-watchface.png', links: {'pebble' =>
+  'https://apps.getpebble.com/applications/53358036d49c3c8db100017b',
+  'pebble-dl' => 'pebble://appstore/53358036d49c3c8db100017b',
+  'github' => 'https://github.com/JasonPuglisi/slammin-watchface'},
+  kind: 'pebble watchface')
