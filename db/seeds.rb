@@ -1,3 +1,10 @@
+# [Website] Last.fm Now - https://wagnaria.xyz/now
+Project.create(title: 'Last.fm Now', description: 'Last.fm Now is a now playing
+  display for Last.fm that shows current song metadata and local weather',
+  image: 'lastfm-now.png', links: {
+  'web' => 'https://wagnaria.xyz/now',
+  'github' => 'https://github.com/JasonPuglisi/lastfm-now'}, kind: 'website')
+
 # [Website] Road Surfer - https://www.roadsurfer.com/
 Project.create(title: 'Road Surfer', description: 'Road Surfer is an upstart
   company that sells transportation devices with focus on enjoyment and
