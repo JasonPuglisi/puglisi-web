@@ -66,7 +66,6 @@
       'pebble watchface' => 'Pebble Watchfaces'}
     sections.each do |section, title|
       projects = @projects.where(kind: section)
-      count = 0
   %>
     <div class="row container">
       <div class="col-sm-12 pull-right">
@@ -78,20 +77,20 @@
     </div>
     <div class="row container">
       <%
-        projects.each do |project|
-          if count > 0 && count % 2 == 0
+        projects.each_with_index do |project, index|
+          if index > 0 && index % 2 == 0
       %>
           </div>
           <div class="row container">
       <%
           end
-          count += 1
+          pull = index == projects.length - 1 && projects.length % 2 == 1
       %>
-        <div class="col-sm-6 pull-right">
+        <div class="col-sm-6 <% if (pull) %>pull-right<% end %>">
           <div class="row">
             <div class="col-md-10 col-lg-8 pull-right">
               <img src="<%= asset_path 'projects/' + project.image %>"
-                class="img-responsive img-<%= section.sub ' ', '-' %>"
+                class="img-responsive img-<%= section.sub(' ', '-') %>"
                 width="100%" alt="<%= project.title %>">
               <br>
               <br>
