@@ -3,7 +3,7 @@
 <div class="bg-home bg-inverse text-inverse text-xs-right">
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <div class="row">
+      <div class="row container">
         <div class="col-sm-6 col-lg-4">
           <h1 class="display-4">Jason Puglisi</h1>
           <br>
@@ -68,7 +68,7 @@
       projects = @projects.where(kind: section)
       count = 0
   %>
-    <div class="row">
+    <div class="row container">
       <div class="col-sm-12 pull-right">
         <a name="<%= title.downcase %>"></a>
         <h1><%= title %></h1>
@@ -76,13 +76,13 @@
         <br>
       </div>
     </div>
-    <div class="row">
+    <div class="row container">
       <%
         projects.each do |project|
           if count > 0 && count % 2 == 0
       %>
           </div>
-          <div class="row">
+          <div class="row container">
       <%
           end
           count += 1
