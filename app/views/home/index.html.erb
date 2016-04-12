@@ -91,7 +91,8 @@
           <div class="row">
             <div class="col-md-10 col-lg-8 pull-right">
               <img src="<%= asset_path 'projects/' + project.image %>"
-                class="img-responsive" width="100%" alt="<%= project.title %>">
+                class="img-responsive img-<%= section.sub ' ', '-' %>"
+                width="100%" alt="<%= project.title %>">
               <br>
               <br>
             </div>
