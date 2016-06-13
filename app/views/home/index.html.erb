@@ -108,9 +108,11 @@
             links = eval(project.links)
 
             link_icons = {'web' => 'globe', 'github' => 'github',
-              'pebble' => 'search', 'pebble-dl' => 'download'}
+              'firefox' => 'puzzle-piece', 'pebble' => 'search',
+              'pebble-dl' => 'download'}
             link_names = {'web' => 'Website', 'github' => 'GitHub',
-              'pebble' => 'Pebble Web', 'pebble-dl' => 'Pebble App'}
+              'firefox' => 'Firefox Add-on', 'pebble' => 'Pebble Web',
+              'pebble-dl' => 'Pebble App'}
 
             links.each do |name, link|
               if link_icons.key?(name)
