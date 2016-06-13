@@ -48,8 +48,9 @@ Project.create(title: 'MyPKS API', description: 'MyPKS API is an unofficial API
 
 # [Utility] Plug.dj Scrobbler
 Project.create(title: 'Plug.dj Scrobbler', description: 'Plug.dj Scrobbler is
-  is a Firefox add-on that scrobbles track plays from the now-retired Plug.dj
-  to Last.fm', image: 'plugdj-scrobbler.png', links: {
+  a Firefox add-on that scrobbles track plays from Plug.dj to Last.fm',
+  image: 'plugdj-scrobbler.png', links: {
+  'firefox' => 'https://addons.mozilla.org/en-US/firefox/addon/plugdj-scrobbler/',
   'github' => 'https://github.com/JasonPuglisi/plugdj-scrobbler'},
   kind: 'utility')
 
