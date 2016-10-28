@@ -1,5 +1,0 @@
-= puglisi-web
-My (Jason Puglisi) personal website. Used to provide some information about me
-and show off the different stuff I've worked on.
-{https://www.puglisi.im/}[https://www.puglisi.im/]
-

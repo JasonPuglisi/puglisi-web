@@ -1,0 +1,22 @@
+{
+  "name": "puglisi-web",
+  "version": "2.0.0",
+  "description": "Jason Puglisi's personal website.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonPuglisi/puglisi-web.git"
+  },
+  "author": "Jason Puglisi <jason@puglisi.im>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JasonPuglisi/puglisi-web/issues"
+  },
+  "homepage": "https://github.com/JasonPuglisi/puglisi-web#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0"
+  }
+}
