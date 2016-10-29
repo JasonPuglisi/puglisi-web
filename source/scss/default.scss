@@ -8,7 +8,11 @@
 
 body {
   @extend .font-primary;
-  background-color: $primary-color;
+  background-color: $black;
+  background-image: url('../images/fountain-pen.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 a, a:active, a:visited {
@@ -20,7 +24,7 @@ a, a:active, a:visited {
 a:hover {
   @extend a;
   cursor: pointer;
-  color: darken($primary-color-light, 10%);
+  color: $primary-color;
   transition: color 0s;
 }
 
@@ -34,6 +38,10 @@ strong {
 
 .scratch {
   @extend .font-scratch;
+}
+
+::selection {
+  background: $primary-color-lighter;
 }
 
 /* Layout styles */
@@ -73,9 +81,9 @@ strong {
   z-index: -1;
 }
 
-@mixin card-upper-adjustments($top, $left, $rotation) {
-  top: $top;
+@mixin card-upper-adjustments($left, $top, $rotation) {
   left: $left;
+  top: $top;
   transform: rotate($rotation);
 }
 
@@ -86,22 +94,34 @@ strong {
 
 .profile-content {
   @extend .content;
-  @include card-upper-adjustments($profile-top, $profile-left, $profile-rotation)
+  @include card-upper-adjustments($profile-left, $profile-top, $profile-rotation);
 }
 
-.profile-card:after {
+.profile-card::after {
   @extend .card-upper;
-  @include card-upper-adjustments($profile-top, $profile-left, $profile-rotation)
+  @include card-upper-adjustments($profile-left, $profile-top, $profile-rotation);
 }
 
-.bottom-gradient {
+body::after {
+  content: '';
   position: fixed;
-  width: 160vw;
-  height: 40vh;
-  left: -30vw;
-  bottom: -20vh;
-  background: radial-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 70%);
-  z-index: -2;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%);
+  z-index: -1;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: url('../images/block-pattern.png') repeat;
+  opacity: 0.42;
 }
 
 /* Typography styles */

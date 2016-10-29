@@ -1,3 +1,7 @@
 node_modules/
-public/**
+public/*
+!public/favicon.ico
+!public/assets
+/public/assets/*
+!public/assets/images
 

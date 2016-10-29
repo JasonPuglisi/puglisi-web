@@ -2,6 +2,10 @@
 
 $orange: #ff8e6b;
 $orange-light: #ffc1ae;
+$perfect-blue: #7fb6ff;
+
+$black: #000;
+$black-lightened: #1f1f1f;
 $gray-dark: #4a4a4a;
 $gray: #707070;
 $gray-light: #c4c4c4;
@@ -14,7 +18,9 @@ $shadow-light: rgba(0, 0, 0, 0.26);
 /* Color aliases */
 
 $primary-color: $orange;
-$primary-color-light: $orange-light;
+$primary-color-light: lighten($primary-color, 10%);
+$primary-color-lighter: lighten($primary-color, 20%);
+$primary-color-dark: darken($primary-color, 10%);
 $primary-color-text: $gray-dark;
 $primary-color-white: $white-shaded;
 
