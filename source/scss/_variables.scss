@@ -23,7 +23,8 @@ $primary-color-white: $white-shaded;
 @mixin font-default {
   font-weight: 400;
   color: $gray-dark;
-  line-height: 1.25em;
+  font-size: 1.66vw;
+  line-height: 1.32em;
 }
 
 @mixin font-primary {

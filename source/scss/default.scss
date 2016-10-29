@@ -45,8 +45,8 @@ strong {
 
 /* Object styles */
 
-$card-width: 30vw;
-$card-height: 37.5vw;
+$card-width: 18em;
+$card-height: 22.6em;
 
 .card {
   flex-basis: $card-width;
@@ -61,9 +61,9 @@ $card-height: 37.5vw;
 
 .content {
   position: absolute;
-  width: $card-width - 2vw;
-  height: $card-height - 6.5vw;
-  padding: 3.25vw 1vw;
+  width: $card-width - 1.35em;
+  height: $card-height - 3.92em;
+  padding: 1.95em 0.6em;
 }
 
 .card-upper {
