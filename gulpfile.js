@@ -58,5 +58,6 @@ gulp.task('watch', function() {
   gulp.watch('source/html/*.html', ['sync-html']);
 });
 
-gulp.task('default', ['minify-html', 'build-css', 'watch']);
+gulp.task('build', ['minify-html', 'build-css']);
+gulp.task('default', ['build', 'watch']);
 

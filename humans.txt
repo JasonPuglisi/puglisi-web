@@ -1,0 +1,16 @@
+/* TEAM */
+
+Jason Puglisi <jason@puglisi.im>
+Github: JasonPuglisi
+Location: Rochester, NY
+
+/* THANKS */
+
+Google Fonts: https://fonts.google.com/
+Font Awesome: http://fontawesome.io/
+Unsplash: https://unsplash.com/
+
+/* SITE */
+
+Software: Sketch, Gulp, Atom, Vim
+
