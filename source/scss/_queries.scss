@@ -1,19 +1,29 @@
-/* Screen breakpoints */
+/* Screen breakpoints (following Bootstrap v4 conventions) */
 
-@media screen and (max-width: 1280px) {
+// Small
+@media screen and (min-width: 544px) {
   .font-default {
-    font-size: 2vw;
+    font-size: 1em;
   }
 }
 
-@media screen and (max-width: 720px) {
+// Medium
+@media screen and (min-width: 768px) {
   .font-default {
-    font-size: 3vw;
+    font-size: 1.1em;
   }
 }
 
-@media screen and (max-width: 480px) {
+// Large
+@media screen and (min-width: 992px) {
   .font-default {
-    font-size: 4vw;
+    font-size: 1.2em;
+  }
+}
+
+// Extra large
+@media screen and (min-width: 1200px) {
+  .font-default {
+    font-size: 1.3em;
   }
 }
