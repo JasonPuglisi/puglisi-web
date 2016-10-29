@@ -1,0 +1,37 @@
+/* Color palette */
+
+$orange: #ff8e6b;
+$orange-light: #ffc1ae;
+$gray-dark: #4a4a4a;
+$gray: #707070;
+$gray-light: #c4c4c4;
+$white-shaded: #f6f6f6;
+$white: #fff;
+
+$shadow: rgba(0, 0, 0, 0.4);
+$shadow-light: rgba(0, 0, 0, 0.26);
+
+/* Color aliases */
+
+$primary-color: $orange;
+$primary-color-light: $orange-light;
+$primary-color-text: $gray-dark;
+$primary-color-white: $white-shaded;
+
+/* Fonts */
+
+@mixin font-default {
+  font-weight: 400;
+  color: $gray-dark;
+  line-height: 1.25em;
+}
+
+@mixin font-primary {
+  font-family: 'Open Sans', 'Trebuchet MS', 'Verdana', 'Arial', sans-serif;
+  @include font-default;
+}
+
+@mixin font-scratch {
+  font-family: 'Indie Flower', fantasy;
+  @include font-default;
+}

@@ -1,0 +1,153 @@
+/* Sass imports */
+
+@import 'reset';
+@import 'external';
+@import 'variables';
+
+/* Universal styles */
+
+body {
+  background-color: $primary-color;
+  @include font-primary;
+}
+
+a, a:active, a:visited {
+  text-decoration: none;
+  color: $primary-color-light;
+  transition: color 0.2s linear;
+}
+
+a:hover {
+  @extend a;
+  cursor: pointer;
+  color: darken($primary-color-light, 10%);
+}
+
+strong {
+  font-weight: 600;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.scratch {
+  @include font-scratch;
+}
+
+/* Layout styles */
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin: 10vh 5vw;
+}
+
+/* Object styles */
+
+$card-width: 30vw;
+$card-height: 37.5vw;
+
+.card {
+  flex-basis: $card-width;
+  height: $card-height;
+  margin: auto;
+  background-color: $white-shaded;
+  border: 1px solid $gray-light;
+  border-radius: 7px;
+  box-shadow: 0 4px 4px 1px $shadow;
+  text-align: center;
+}
+
+.content {
+  position: absolute;
+  width: $card-width - 2vw;
+  height: $card-height - 6.5vw;
+  padding: 3.25vw 1vw;
+}
+
+.card-upper {
+  @extend .card;
+  content: '';
+  display: block;
+  position: relative;
+  box-shadow: 0 5px 5px 1px $shadow-light;
+  z-index: -1;
+}
+
+$profile-top: 5px;
+$profile-left: -4px;
+$profile-rotation: -1deg;
+
+@mixin card-upper-adjustments($top, $left, $rotation) {
+  top: $top;
+  left: $left;
+  transform: rotate($rotation);
+}
+
+.profile-card {
+  @extend .card;
+  transform: rotate(-1deg);
+}
+
+.profile-content {
+  @extend .content;
+  @include card-upper-adjustments($profile-top, $profile-left, $profile-rotation)
+}
+
+.profile-card:after {
+  @extend .card-upper;
+  @include card-upper-adjustments($profile-top, $profile-left, $profile-rotation)
+}
+
+.bottom-gradient {
+  position: fixed;
+  width: 160vw;
+  height: 40vh;
+  left: -30vw;
+  bottom: -20vh;
+  background: radial-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 70%);
+  z-index: -2;
+}
+
+/* Typography styles */
+
+.icon-main {
+  display: block;
+  font-size: 2.9em;
+}
+
+.name {
+  display: block;
+  padding: 0.2em 0 0.4em 0;
+  font-size: 1.8em;
+  line-height: 1.15em;
+
+  strong {
+    font-size: 1.3em;
+  }
+}
+
+.headline {
+  display: block;
+  padding: 0.4em 0;
+}
+
+.account {
+  display: inline-block;
+  margin: 0 0.5em;
+  font-size: 0.7em;
+  text-align: left;
+
+  .fa-github {
+    font-size: 1.25em;
+  }
+  .fa-paper-plane {
+    font-size: 1.1em;
+  }
+
+  a {
+    display: block;
+    font-size: 1.35em;
+  }
+}

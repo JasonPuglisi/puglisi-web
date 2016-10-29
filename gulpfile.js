@@ -1,8 +1,9 @@
-var gulp        = require('gulp'),
-    browserSync = require('browser-sync').create(),
-    htmlmin     = require('gulp-htmlmin'),
-    sass        = require('gulp-sass'),
-    sourcemaps  = require('gulp-sourcemaps');
+var gulp         = require('gulp'),
+    autoprefixer = require('gulp-autoprefixer'),
+    browserSync  = require('browser-sync').create(),
+    htmlmin      = require('gulp-htmlmin'),
+    sass         = require('gulp-sass'),
+    sourcemaps   = require('gulp-sourcemaps');
 
 gulp.task('minify-html', function() {
   return gulp.src('source/html/*.html')
@@ -33,6 +34,7 @@ gulp.task('build-css', function() {
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
+    .pipe(autoprefixer())
     .pipe(sourcemaps.write('./sourcemaps'))
     .pipe(gulp.dest('public/assets/stylesheets'));
 });
