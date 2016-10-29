@@ -7,8 +7,8 @@
 /* Universal styles */
 
 body {
+  @extend .font-primary;
   background-color: $primary-color;
-  @include font-primary;
 }
 
 a, a:active, a:visited {
@@ -21,6 +21,7 @@ a:hover {
   @extend a;
   cursor: pointer;
   color: darken($primary-color-light, 10%);
+  transition: color 0s;
 }
 
 strong {
@@ -32,7 +33,7 @@ strong {
 }
 
 .scratch {
-  @include font-scratch;
+  @extend .font-scratch;
 }
 
 /* Layout styles */
@@ -44,9 +45,6 @@ strong {
 }
 
 /* Object styles */
-
-$card-width: 18em;
-$card-height: 22.6em;
 
 .card {
   flex-basis: $card-width;
@@ -74,10 +72,6 @@ $card-height: 22.6em;
   box-shadow: 0 5px 5px 1px $shadow-light;
   z-index: -1;
 }
-
-$profile-top: 5px;
-$profile-left: -4px;
-$profile-rotation: -1deg;
 
 @mixin card-upper-adjustments($top, $left, $rotation) {
   top: $top;
@@ -111,6 +105,23 @@ $profile-rotation: -1deg;
 }
 
 /* Typography styles */
+
+.font-default {
+  font-weight: 400;
+  color: $gray-dark;
+  font-size: 1vw;
+  line-height: 1.32em;
+}
+
+.font-primary {
+  @extend .font-default;
+  font-family: 'Open Sans', 'Trebuchet MS', 'Verdana', 'Arial', sans-serif;
+}
+
+.font-scratch {
+  @extend .font-default;
+  font-family: 'Indie Flower', fantasy;
+}
 
 .icon-main {
   display: block;
@@ -151,3 +162,7 @@ $profile-rotation: -1deg;
     font-size: 1.35em;
   }
 }
+
+/* Media queries */
+
+@import 'queries';

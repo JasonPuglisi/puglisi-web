@@ -18,21 +18,11 @@ $primary-color-light: $orange-light;
 $primary-color-text: $gray-dark;
 $primary-color-white: $white-shaded;
 
-/* Fonts */
+/* Object numbers */
 
-@mixin font-default {
-  font-weight: 400;
-  color: $gray-dark;
-  font-size: 1.66vw;
-  line-height: 1.32em;
-}
+$card-width: 18em;
+$card-height: 22.6em;
 
-@mixin font-primary {
-  font-family: 'Open Sans', 'Trebuchet MS', 'Verdana', 'Arial', sans-serif;
-  @include font-default;
-}
-
-@mixin font-scratch {
-  font-family: 'Indie Flower', fantasy;
-  @include font-default;
-}
+$profile-top: 5px;
+$profile-left: -4px;
+$profile-rotation: -1deg;
