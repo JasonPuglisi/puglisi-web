@@ -8,11 +8,36 @@
 
 body {
   @extend .font-primary;
+  margin: 1em 0;
   background-color: $black;
   background-image: url('../images/fountain-pen.jpg');
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-image: url('../images/block-pattern.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  opacity: 0.42;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%);
+  z-index: -2;
 }
 
 a, a:active, a:visited {
@@ -36,10 +61,6 @@ strong {
   text-decoration: line-through;
 }
 
-.scratch {
-  @extend .font-scratch;
-}
-
 ::selection {
   background: $primary-color-lighter;
 }
@@ -48,8 +69,8 @@ strong {
 
 .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  margin: 10vh 5vw;
 }
 
 /* Object styles */
@@ -57,19 +78,21 @@ strong {
 .card {
   flex-basis: $card-width;
   height: $card-height;
-  margin: auto;
+  margin: 2em 1em;;
   background-color: $white-shaded;
   border: 1px solid $gray-light;
   border-radius: 7px;
   box-shadow: 0 4px 4px 1px $shadow;
   text-align: center;
+  z-index: 1;
 }
 
 .content {
   position: absolute;
   width: $card-width - 1.35em;
   height: $card-height - 3.92em;
-  padding: 1.95em 0.6em;
+  padding: 0.6em;
+  text-align: left;
 }
 
 .card-upper {
@@ -77,6 +100,7 @@ strong {
   content: '';
   display: block;
   position: relative;
+  margin: 0;
   box-shadow: 0 5px 5px 1px $shadow-light;
   z-index: -1;
 }
@@ -89,12 +113,14 @@ strong {
 
 .profile-card {
   @extend .card;
-  transform: rotate(-1deg);
+  transform: rotate($profile-rotation-lower);
 }
 
 .profile-content {
   @extend .content;
   @include card-upper-adjustments($profile-left, $profile-top, $profile-rotation);
+  padding: 1.95em 0.6em;
+  text-align: center;
 }
 
 .profile-card::after {
@@ -102,26 +128,47 @@ strong {
   @include card-upper-adjustments($profile-left, $profile-top, $profile-rotation);
 }
 
-body::after {
-  content: '';
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  background: linear-gradient(to top left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%);
-  z-index: -1;
+.info-card {
+  @extend .card;
+  transform: rotate($info-rotation-lower);
+
+  h2 {
+    font-size: 0.92em;
+  }
+
+  p {
+    font-size: 0.89em;
+    margin-left: 1em;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 0.6em;
+  }
 }
 
-body::before {
-  content: '';
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  background: url('../images/block-pattern.png') repeat;
-  opacity: 0.42;
+.info-content {
+  @extend .content;
+  @include card-upper-adjustments($info-left, $info-top, $info-rotation);
+}
+
+.info-card::after {
+  @extend .card-upper;
+  @include card-upper-adjustments($info-left, $info-top, $info-rotation);
+}
+
+.projects-card {
+  @extend .card;
+  transform: rotate($projects-rotation-lower);
+}
+
+.projects-content {
+  @extend .content;
+  @include card-upper-adjustments($projects-left, $projects-top, $projects-rotation);
+}
+
+.projects-card::after {
+  @extend .card-upper;
+  @include card-upper-adjustments($projects-left, $projects-top, $projects-rotation);
 }
 
 /* Typography styles */
@@ -129,18 +176,13 @@ body::before {
 .font-default {
   font-weight: 400;
   color: $gray-dark;
-  font-size: 0.72em;
+  font-size: 0.9em;
   line-height: 1.32em;
 }
 
 .font-primary {
   @extend .font-default;
   font-family: 'Open Sans', 'Trebuchet MS', 'Verdana', 'Arial', sans-serif;
-}
-
-.font-scratch {
-  @extend .font-default;
-  font-family: 'Indie Flower', fantasy;
 }
 
 .icon-main {

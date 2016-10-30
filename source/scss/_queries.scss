@@ -1,4 +1,4 @@
-/* Screen breakpoints (following Bootstrap v4 conventions) */
+/* Screen breakpoints */
 
 // Small
 @media screen and (min-width: 544px) {
@@ -22,8 +22,20 @@
 }
 
 // Extra large
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
   .font-default {
     font-size: 1.3em;
+  }
+
+  .container {
+    padding-top: 5em;
+  }
+
+  .profile-card {
+    margin: -3.5em;
+  }
+
+  .info-card {
+    order: -1;
   }
 }
