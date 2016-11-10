@@ -69,8 +69,13 @@ strong {
 
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-around;
+}
+
+.flex-break {
+  width: 100%;
+  background-color: red;
 }
 
 /* Object styles */

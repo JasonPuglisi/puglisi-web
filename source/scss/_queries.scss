@@ -1,23 +1,39 @@
 /* Screen breakpoints */
 
 // Small
-@media screen and (min-width: 544px) {
+@media screen and (min-width: 500px) {
   .font-default {
     font-size: 1em;
   }
 }
 
 // Medium
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .font-default {
     font-size: 1.1em;
   }
 }
 
 // Large
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .font-default {
-    font-size: 1.2em;
+    font-size: 1.1em;
+  }
+
+  .info-card {
+    order: -1;
+  }
+
+  .container {
+    padding-top: 5em;
+  }
+
+  .profile-card {
+    margin: -1em;
+  }
+
+  .flex-break {
+    display: none;
   }
 }
 
@@ -28,14 +44,10 @@
   }
 
   .container {
-    padding-top: 5em;
+    padding-top: 7em;
   }
 
   .profile-card {
-    margin: -3.5em;
-  }
-
-  .info-card {
-    order: -1;
+    margin: -2em;
   }
 }
