@@ -7,229 +7,95 @@
 /* Universal styles */
 
 body {
-  @extend .font-primary;
-  margin: 1em 0;
+  @extend .font-default;
   background-color: $black;
-  background-image: url('../images/fountain-pen.jpg');
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  background-image: url('../images/block-pattern.png');
-  background-repeat: repeat;
-  background-attachment: fixed;
-  opacity: 0.42;
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  background: linear-gradient(to top left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%);
-  z-index: -2;
 }
 
 a, a:active, a:visited {
   text-decoration: none;
-  color: $primary-color-light;
+  color: $primary-color;
   transition: color 0.2s linear;
 }
 
 a:hover {
-  @extend a;
   cursor: pointer;
-  color: $primary-color;
+  color: lighten($primary-color, 10%);
   transition: color 0s;
 }
 
-strong {
-  font-weight: 600;
-}
-
-.strike {
-  text-decoration: line-through;
-}
-
 ::selection {
-  background: $primary-color-lighter;
+  background: lighten($primary-color-light, 20%);
 }
 
 /* Layout styles */
 
-.container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+section {
+  min-height: 82vh;
+  padding: 18vh 10vw 0 10vw;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  
+  &.landing {
+    height: 78vh;
+    padding: 22vh 10vw 0 10vw;
+    background-image: url('../images/backgrounds/turntable.jpg');
+  }
 }
 
-.flex-break {
-  width: 100%;
-  background-color: red;
+.links {
+  padding-top: 8vh;
+  font-size: 2.5vw;
+  
+  .link:not(:first-child) {
+    padding-left: 4vw;
+  }
+  
+  i {
+    padding-right: 0.5vw;
+  }
 }
 
-/* Object styles */
-
-.card {
-  flex-basis: $card-width;
-  height: $card-height;
-  margin: 2em 1em;;
-  background-color: $white-shaded;
-  border: 1px solid $gray-light;
-  border-radius: 7px;
-  box-shadow: 0 4px 4px 1px $shadow;
-  text-align: center;
-  z-index: 1;
-}
-
-.content {
+.quicknav {
   position: absolute;
-  width: $card-width - 1.35em;
-  height: $card-height - 3.92em;
-  padding: 0.6em;
-  text-align: left;
-}
+  bottom: 0;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 9vh;
+  font-size: 1.5vw;
 
-.card-upper {
-  @extend .card;
-  content: '';
-  display: block;
-  position: relative;
-  margin: 0;
-  box-shadow: 0 5px 5px 1px $shadow-light;
-  z-index: -1;
-}
-
-@mixin card-upper-adjustments($left, $top, $rotation) {
-  left: $left;
-  top: $top;
-  transform: rotate($rotation);
-}
-
-.profile-card {
-  @extend .card;
-  transform: rotate($profile-rotation-lower);
-}
-
-.profile-content {
-  @extend .content;
-  @include card-upper-adjustments($profile-left, $profile-top, $profile-rotation);
-  padding: 1.95em 0.6em;
-  text-align: center;
-}
-
-.profile-card::after {
-  @extend .card-upper;
-  @include card-upper-adjustments($profile-left, $profile-top, $profile-rotation);
-}
-
-.info-card {
-  @extend .card;
-  transform: rotate($info-rotation-lower);
-
-  h2 {
-    font-size: 0.92em;
+  a, a:active, a:visited {
+    text-decoration: none;
+    color: $primary-color-light;
+    transition: color 0.2s linear;
   }
 
-  p {
-    font-size: 0.89em;
-    margin-left: 1em;
+  a:hover {
+    cursor: pointer;
+    color: lighten($primary-color-light, 10%);
+    transition: color 0s;
   }
-
-  p:not(:last-child) {
-    margin-bottom: 0.6em;
-  }
-}
-
-.info-content {
-  @extend .content;
-  @include card-upper-adjustments($info-left, $info-top, $info-rotation);
-}
-
-.info-card::after {
-  @extend .card-upper;
-  @include card-upper-adjustments($info-left, $info-top, $info-rotation);
-}
-
-.projects-card {
-  @extend .card;
-  transform: rotate($projects-rotation-lower);
-}
-
-.projects-content {
-  @extend .content;
-  @include card-upper-adjustments($projects-left, $projects-top, $projects-rotation);
-}
-
-.projects-card::after {
-  @extend .card-upper;
-  @include card-upper-adjustments($projects-left, $projects-top, $projects-rotation);
 }
 
 /* Typography styles */
 
 .font-default {
   font-weight: 400;
-  color: $gray-dark;
-  font-size: 0.9em;
-  line-height: 1.32em;
+  color: $primary-color-text;
+  font-family: 'Oswald', 'Trebuchet MS', 'Verdana', 'Arial', sans-serif;
 }
 
-.font-primary {
-  @extend .font-default;
-  font-family: 'Open Sans', 'Trebuchet MS', 'Verdana', 'Arial', sans-serif;
+h1 {
+  padding-bottom: 2vh;
+  font-weight: 700;
+  font-size: 8vw;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.8;
 }
 
-.icon-main {
-  display: block;
-  font-size: 2.9em;
+h2 {
+  padding: 1.5vh 0;
+  font-size: 2.5vw;
 }
-
-.name {
-  display: block;
-  padding: 0.2em 0 0.4em 0;
-  font-size: 1.8em;
-  line-height: 1.15em;
-
-  strong {
-    font-size: 1.3em;
-  }
-}
-
-.headline {
-  display: block;
-  padding: 0.4em 0;
-}
-
-.account {
-  display: inline-block;
-  margin: 0 0.5em;
-  font-size: 0.7em;
-  text-align: left;
-
-  .fa-github {
-    font-size: 1.25em;
-  }
-  .fa-paper-plane {
-    font-size: 1.1em;
-  }
-
-  a {
-    display: block;
-    font-size: 1.35em;
-  }
-}
-
-/* Media queries */
-
-@import 'queries';

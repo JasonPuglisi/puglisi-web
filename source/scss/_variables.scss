@@ -1,45 +1,14 @@
 /* Color palette */
 
-$orange: #ff8e6b;
-$orange-light: #ffc1ae;
-$perfect-blue: #7fb6ff;
+$purple: #a497ff;
+$purple-light: #dcd7ff;
 
-$black: #000;
-$black-lightened: #1f1f1f;
-$gray-dark: #4a4a4a;
-$gray: #707070;
-$gray-light: #c4c4c4;
-$white-shaded: #f6f6f6;
-$white: #fff;
-
-$shadow: rgba(0, 0, 0, 0.4);
-$shadow-light: rgba(0, 0, 0, 0.26);
+$black: #1f1f1f;
+$gray: #70706f;
+$white: #f7f7f7;
 
 /* Color aliases */
 
-$primary-color: $orange;
-$primary-color-light: lighten($primary-color, 10%);
-$primary-color-lighter: lighten($primary-color, 20%);
-$primary-color-dark: darken($primary-color, 10%);
-$primary-color-text: $gray-dark;
-$primary-color-white: $white-shaded;
-
-/* Object numbers */
-
-$card-width: 18em;
-$card-height: 22.6em;
-
-$profile-top: 9px;
-$profile-left: -6px;
-$profile-rotation: -1deg;
-$profile-rotation-lower: -1deg;
-
-$info-top: 9px;
-$info-left: 1px;
-$info-rotation: 1deg;
-$info-rotation-lower: 0deg;
-
-$projects-top: 5px;
-$projects-left: 1px;
-$projects-rotation: -1deg;
-$projects-rotation-lower: 1deg;
+$primary-color: $purple;
+$primary-color-light: $purple-light;
+$primary-color-text: $white;
