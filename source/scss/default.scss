@@ -34,12 +34,15 @@ section {
   padding: 18vh 10vw 0 10vw;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
   
   &.landing {
     height: 78vh;
     padding: 22vh 10vw 0 10vw;
     background-image: url('../images/backgrounds/turntable.jpg');
+  }
+  
+  &.about-me {
+    background-image: url('../images/backgrounds/tiger.jpg');
   }
 }
 
@@ -47,7 +50,7 @@ section {
   padding-top: 8vh;
   font-size: 2.5vw;
   
-  .link:not(:first-child) {
+  .link + .link {
     padding-left: 4vw;
   }
   
@@ -98,4 +101,13 @@ h1 {
 h2 {
   padding: 1.5vh 0;
   font-size: 2.5vw;
+}
+
+p {
+  font-size: 3vw;
+  line-height: 1.3em;
+}
+
+p + p {
+  padding-top: 1em;
 }
