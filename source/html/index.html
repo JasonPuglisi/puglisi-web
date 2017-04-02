@@ -85,9 +85,9 @@
         {% if project.services | length > 0 %}
         <span>Services:
           {% set comma = joiner() %}
-          {% for service in project.services -%}
-          {{ comma() }} {{ service }}
-          {%- endfor %}
+          {%- for name, link in project.services -%}
+          {{ comma() }} <a href="{{ link }}">{{ name }}</a></span>
+          {%- endfor -%}
         </span>
         {% endif %}
       </p>
