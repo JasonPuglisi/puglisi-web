@@ -1,0 +1,50 @@
+/* Media queries */
+/* Based off of Bootstrap responsive breakpoints */
+
+// Bootstrap equivalent: small
+@media (min-width: 576px) {
+  h1 {
+    color: red;
+  }
+}
+
+// Bootstrap equivalent: medium
+@media (min-width: 768px) {
+  h1 {
+    color: yellow;
+  }
+}
+
+// Bootstrap equivalent: large
+@media (min-width: 992px) {
+  h1 {
+    color: green;
+  }
+}
+
+// Bootstrap equivalent: extra large
+@media (min-width: 1200px) {
+  h1 {
+    color: blue;
+    font-size: 8vw;
+    line-height: 1em;
+  }
+
+  h2, .links, .quicknav {
+    font-size: 2.5vw;
+  }
+
+  p {
+    font-size: 2.4vw;
+  }
+
+  section {
+    &.about-me, &.projects {
+      font-size: 3vw;
+    }
+  }
+
+  .links .link small {
+    font-size: 1.6vw;
+  }
+}

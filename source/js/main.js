@@ -37,7 +37,7 @@ function appendStars(link, response) {
   var stars = JSON.parse(response).stargazers_count;
   if (stars) {
     var starString = stars === 1 ? 'star' : 'stars';
-    var starString = stars + ' ' + starString;
-    link.innerHTML += ' <small>' + starString + '</small>';
+    var starString = stars + '&nbsp;' + starString;
+    link.innerHTML += '&nbsp;<small>' + starString + '</small>';
   }
 }

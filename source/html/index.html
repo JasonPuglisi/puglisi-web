@@ -12,19 +12,19 @@
   <body>
     <section class="landing">
       <h1>Jason Puglisi</h1>
-      <h2>security analyst / system administrator / software developer</h2>
+      <h2>security&nbsp;analyst&nbsp;/ system&nbsp;administrator&nbsp;/ software&nbsp;developer</h2>
       <div class="links">
         <span class="link">
-          <i class="fa fa-envelope"></i> <a href="mailto:jason@puglisi.im">jason@puglisi.im</a>
+          <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:jason@puglisi.im">jason@puglisi.im</a>
         </span>
         <span class="link">
-          <i class="fa fa-github"></i> <a href="https://github.com/JasonPuglisi">JasonPuglisi</a>
+          <i class="fa fa-github"></i>&nbsp;<a href="https://github.com/JasonPuglisi">JasonPuglisi</a>
         </span>
       </div>
       <div class="quicknav">
-        <a href="#about-me">about me <i class="fa fa-chevron-down"></i></a>
-        <a href="#skills">skills <i class="fa fa-chevron-down"></i></a>
-        <a href="#projects">projects <i class="fa fa-chevron-down"></i></a>
+        <a href="#about-me">about&nbsp;me&nbsp;<i class="fa fa-chevron-down"></i></a>
+        <a href="#skills">skills&nbsp;<i class="fa fa-chevron-down"></i></a>
+        <a href="#projects">projects&nbsp;<i class="fa fa-chevron-down"></i></a>
       </div>
     </section>
     <section class="about-me" id="about-me">
@@ -47,7 +47,7 @@
         Platform, and DigitalOcean.</p>
     </section>
     <section class="projects" id="projects">
-      <h1>Projects <small>and Activities</small></h1>
+      <h1>Projects</h1>
       <p>I've made web apps, chat bots, browser addons, smartwatch watchfaces,
         and more. Scroll down for an in-depth look.</p>
       <p>I've participated in the three-day cyber defense competition
@@ -60,7 +60,7 @@
       <h1>{{ project.name }}</h1>
       {% if project.links | length > 0 %}
       <div class="links">
-        {%- for type, link in project.links -%}
+        {% for type, link in project.links %}
         {% if type == "Web" %}
         {% set icon = "globe" %}
         {% elif type == "GitHub" %}
@@ -68,10 +68,10 @@
         {% elif type == "Firefox Add-on" or type == "Pebble Watchface" %}
         {% set icon = "puzzle-piece" %}
         {% endif %}
-        <span class="link"><i class="fa fa-{{icon}}"></i> <a href="{{ link }}">{{ type }}</a></span>
-        {%- endfor -%}
+        <span class="link"><i class="fa fa-{{icon}}"></i>&nbsp;<a href="{{ link }}">{{ type }}</a></span>
+        {% endfor %}
       </div>
-      {% endif %}
+      {% endif%}
       <p>{{ project.description }}</p>
       <p>
         {% if project.languages | length > 0 %}
@@ -85,9 +85,9 @@
         {% if project.services | length > 0 %}
         <span>Services:
           {% set comma = joiner() %}
-          {%- for name, link in project.services -%}
+          {% for name, link in project.services -%}
           {{ comma() }} <a href="{{ link }}">{{ name }}</a></span>
-          {%- endfor -%}
+          {%- endfor %}
         </span>
         {% endif %}
       </p>
