@@ -59,11 +59,18 @@
     <section class="project" style="background-image:url('../assets/images/backgrounds/projects/{{ id }}.jpg')">
       <h1>{{ project.name }}</h1>
       {% if project.links | length > 0 %}
-      <span class="links">
+      <div class="links">
         {%- for type, link in project.links -%}
-        <span class="link"><a href="{{ link }}">{{ type }}</a></span>
+        {% if type == "Web" %}
+        {% set icon = "globe" %}
+        {% elif type == "GitHub" %}
+        {% set icon = "github" %}
+        {% elif type == "Firefox Add-on" or type == "Pebble Watchface" %}
+        {% set icon = "puzzle-piece" %}
+        {% endif %}
+        <span class="link"><i class="fa fa-{{icon}}"></i> <a href="{{ link }}">{{ type }}</a></span>
         {%- endfor -%}
-      </span>
+      </div>
       {% endif %}
       <p>{{ project.description }}</p>
       <p>

@@ -30,7 +30,7 @@ a:hover {
 /* Layout styles */
 
 section {
-  min-height: 72vh;
+  min-height: 82vh;
   padding: 18vh 10vw 10vh 10vw;
   background-position: center center;
   background-size: cover;
@@ -73,6 +73,10 @@ section {
   i {
     padding-right: 0.5vw;
   }
+}
+
+.project .links {
+  padding: 2vh 0 6vh 0;
 }
 
 .quicknav {
