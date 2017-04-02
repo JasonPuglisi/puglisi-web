@@ -75,8 +75,14 @@ section {
   }
 }
 
-.project .links {
-  padding: 2vh 0 6vh 0;
+.project {
+  h1 {
+    text-transform: none;
+  }
+
+  .links {
+    padding: 2vh 0 6vh 0;
+  }
 }
 
 .quicknav {
