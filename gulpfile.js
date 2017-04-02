@@ -5,7 +5,8 @@ var gulp         = require('gulp'),
     htmlmin      = require('gulp-htmlmin'),
     nunjucks     = require('gulp-nunjucks-render'),
     sass         = require('gulp-sass'),
-    sourcemaps   = require('gulp-sourcemaps');
+    sourcemaps   = require('gulp-sourcemaps'),
+    uglify       = require('gulp-uglify');
 
 gulp.task('build-html', function() {
   var projectData = JSON.parse(fs.readFileSync('./source/data/projects.json'));
@@ -43,11 +44,23 @@ gulp.task('build-css', function() {
     .pipe(gulp.dest('public/assets/stylesheets'));
 });
 
+gulp.task('build-js', function() {
+  return gulp.src('source/js/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(uglify())
+    .pipe(sourcemaps.write('./sourcemaps'))
+    .pipe(gulp.dest('public/assets/javascripts'));
+});
+
 gulp.task('sync-html', ['build-html'], function() {
   browserSync.reload();
 });
 
 gulp.task('sync-css', ['build-css'], function() {
+  browserSync.reload();
+});
+
+gulp.task('sync-js', ['build-js'], function() {
   browserSync.reload();
 });
 
@@ -59,9 +72,9 @@ gulp.task('watch', function() {
   });
 
   gulp.watch('source/scss/*.scss', ['sync-css']);
-  gulp.watch(['source/html/*.html', 'source/templates/*.html',
-    'source/data/*.json'], ['sync-html']);
+  gulp.watch(['source/html/*.html', 'source/data/*.json'], ['sync-html']);
+  gulp.watch('source/js/*.js', ['sync-js']);
 });
 
-gulp.task('build', ['build-html', 'build-css']);
+gulp.task('build', ['build-html', 'build-css', 'build-js']);
 gulp.task('default', ['build', 'watch']);

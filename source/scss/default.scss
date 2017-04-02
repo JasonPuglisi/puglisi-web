@@ -70,8 +70,14 @@ section {
     padding-left: 4vw;
   }
 
-  i {
-    padding-right: 0.5vw;
+  .link {
+    i {
+      padding-right: 0.5vw;
+    }
+
+    small {
+      font-size: 1.6vw;
+    }
   }
 }
 
