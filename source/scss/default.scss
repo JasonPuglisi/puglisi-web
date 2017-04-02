@@ -45,7 +45,7 @@ section {
     background-image: url('../images/backgrounds/tiger.jpg');
 
     p {
-      font-size: 6vw;
+      font-size: 4.5vw;
     }
   }
 
@@ -57,14 +57,14 @@ section {
     background-image: url('../images/backgrounds/fans.jpg');
 
     p {
-      font-size: 6vw;
+      font-size: 4.5vw;
     }
   }
 }
 
 .links {
   padding-top: 8vh;
-  font-size: 5vw;
+  font-size: 4.62vw;
 
   .link + .link {
     padding-left: 4vw;
@@ -76,7 +76,7 @@ section {
     }
 
     small {
-      font-size: 3.2vw;
+      font-size: 3vw;
     }
   }
 }
@@ -98,7 +98,8 @@ section {
   display: flex;
   justify-content: space-between;
   padding-bottom: 9vh;
-  font-size: 5vw;
+  font-size: 4.62vw;
+  visibility: hidden;
 
   a, a:active, a:visited {
     text-decoration: none;
@@ -124,7 +125,7 @@ section {
 h1 {
   padding-bottom: 2vh;
   font-weight: 700;
-  font-size: 20vw;
+  font-size: 15vw;
   letter-spacing: 1px;
   line-height: 1.1em;
   text-transform: uppercase;
@@ -133,12 +134,12 @@ h1 {
 
 h2 {
   padding: 1.5vh 0;
-  font-size: 5vw;
+  font-size: 4.62vw;
   line-height: 1.1em;
 }
 
 p {
-  font-size: 4.8vw;
+  font-size: 4.69vw;
   line-height: 1.3em;
 }
 
