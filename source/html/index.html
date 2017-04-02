@@ -55,6 +55,36 @@
         15</a> and 24-hour hackathon
         <a href="https://brickhack3.devpost.com/">BrickHack 3</a>.</p>
     </section>
-    {{projects}}
+    {% for id, project in projects %}
+    <section class="project" style="background-image:url('../assets/images/backgrounds/projects/{{ id }}.jpg')">
+      <h1>{{ project.name }}</h1>
+      {% if project.links | length > 0 %}
+      <span class="links">
+        {%- for type, link in project.links -%}
+        <span class="link"><a href="{{ link }}">{{ type }}</a></span>
+        {%- endfor -%}
+      </span>
+      {% endif %}
+      <p>{{ project.description }}</p>
+      <p>
+        {% if project.languages | length > 0 %}
+        <span>Languages:
+          {% set comma = joiner() %}
+          {% for language in project.languages -%}
+          {{ comma() }} {{ language }}
+          {%- endfor %}
+        </span><br>
+        {% endif %}
+        {% if project.services | length > 0 %}
+        <span>Services:
+          {% set comma = joiner() %}
+          {% for service in project.services -%}
+          {{ comma() }} {{ service }}
+          {%- endfor %}
+        </span>
+        {% endif %}
+      </p>
+    </section>
+    {% endfor %}
   </body>
 </html>

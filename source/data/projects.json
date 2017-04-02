@@ -3,81 +3,83 @@
     "lastfm-now": {
       "name": "Last.fm Now",
       "links": {
-        "web": "https://wagnaria.xyz/now/",
-        "github": "JasonPuglisi/lastfm-now"
+        "Web": "https://wagnaria.xyz/now/",
+        "GitHub": "https://github.com/JasonPuglisi/lastfm-now"
       },
       "description": "A now playing web app for Last.fm that displays current album art and song details for a user, with the ability to control Philips Hue color lights based on album art colors. Automatically shows current weather and a forecast summary.",
       "languages": [
         "JavaScript (Node.js/jQuery/JSON)",
         "HTML/CSS (Pug)"
       ],
-      "services": [
-        "Last.fm API",
-        "Dark Sky API",
-        "Philips Hue API"
-      ]
+      "services": {
+        "Last.fm API": "http://www.last.fm/api",
+        "Dark Sky API": "https://darksky.net/dev/",
+        "Philips Hue API": "https://www.developers.meethue.com/"
+      }
     },
     "plugdj-scrobbler": {
       "name": "Plug.dj Scrobbler",
       "links": {
-        "firefox-addon": "plugdj-scrobbler",
-        "github": "JasonPuglisi/plugdj-scrobbler"
+        "Firefox Add-on": "https://addons.mozilla.org/en-US/firefox/addon/plugdj-scrobbler",
+        "GitHub": "https://github.com/JasonPuglisi/plugdj-scrobbler"
       },
       "description": "A Firefox add-on to scrobble tracks from community radio website Plug.dj to Last.fm. Supports live updating of now playing status. Officially published to and reviewed on the Firefox Add-ons website.",
       "languages": [
         "JavaScript (JSON)",
         "HTML/CSS"
       ],
-      "services": [
-        "Last.fm API"
-      ]
+      "services": {
+        "Last.fm API": "http://www.last.fm/api"
+      }
     },
     "helvetica-text": {
       "name": "Helvetica Text",
       "links": {
-        "pebble-watchface": "53852972740f95161d000184",
-        "github": "JasonPuglisi/helvetica-text"
+        "Pebble Watchface": "https://apps.getpebble.com/en_US/application/53852972740f95161d000184",
+        "GitHub": "https://github.com/JasonPuglisi/helvetica-text"
       },
       "description": "A Pebble smartwatch watchface based on the default Text Watch watchface. Shows the current time and date in words using an embed Helvetica font with a limited character set to reduce filesize. Developed at the request of a user on Reddit's Pebble subreddit.",
       "languages": [
         "C"
-      ]
+      ],
+      "services": {}
     },
     "snow-irc-bot": {
       "name": "Snow IRC Bot",
       "links": {
-        "github": "JasonPuglisi/snow-irc-bot"
+        "GitHub": "https://github.com/JasonPuglisi/snow-irc-bot"
       },
       "description": "A modular, multi-network IRC bot with many functions. Saves user data such as location and online usernames. Fetches weather, searches videos, controls Philips Hue lights, translates text, and more.",
       "languages": [
         "JavaScript (Node.js/JSON)"
       ],
-      "services": [
-        "Darky Sky API",
-        "Last.fm API",
-        "Steam Web API",
-        "Plug.dj API",
-        "YouTube API",
-        "Philips Hue API",
-        "Microsoft Translator API",
-        "Yo API"
-      ]
+      "services": {
+        "Darky Sky API": "https://darksky.net/dev/",
+        "Last.fm API": "http://www.last.fm/api",
+        "Steam Web API": "https://developer.valvesoftware.com/wiki/Steam_Web_API",
+        "Plug.dj API": "http://support.plug.dj/hc/en-us/categories/200123567-API",
+        "YouTube API": "https://www.youtube.com/yt/dev/api-resources.html",
+        "Philips Hue API": "https://www.developers.meethue.com/",
+        "Microsoft Translator API": "https://www.microsoft.com/en-us/translator/translatorapi.aspx",
+        "Yo API": "http://docs.justyo.co/"
+      }
     },
     "mypks-api": {
       "name": "MyPKS API",
       "links": {
-        "github": "JasonPuglisi/mypks-api"
+        "GitHub": "https://github.com/JasonPuglisi/mypks-api"
       },
       "description": "An API for Six Flags employee scheduling website MyPKS that scrapes and returns web data in JSON format. Uses session hijacking to bypass Google's No CAPTCHA reCAPTCHA.",
       "languages": [
         "JavaScript (Node.js/JSON)"
-      ]
+      ],
+      "services": {}
     },
     "rville-spirit": {
       "name": "Rville Spirit",
       "links": {
-        "web": "https://www.rvillespirit.com/",
-        "github": "JasonPuglisi/rville-spirit-website"
+        "Web": "https://www.rvillespirit.com/",
+        "GitHub": "https://github.com/JasonPuglisi/rville-spirit-website"
       },
       "description": "An online apparel store for Robbinsville High School that manipulates embed code from PayPal Express Checkout to create a simple user-friendly interface. Products are stored in a database for easy additions and modifications.",
       "languages": [
@@ -85,25 +87,9 @@
         "HTML/CSS",
         "MySQL"
       ],
-      "services": [
-        "PayPal Express Checkout"
-      ]
+      "services": {
+        "PayPal Express Checkout": "https://www.paypal.com/us/webapps/mpp/express-checkout"
+      }
     }
-  },
-  "links": {
-    "github": "https://github.com/",
-    "firefox-addon": "https://addons.mozilla.org/en-US/firefox/addon/",
-    "pebble-watchface": "https://apps.getpebble.com/en_US/application/"
-  },
-  "services": {
-    "Dark Sky API": "https://darksky.net/dev/",
-    "Last.fm API": "http://www.last.fm/api",
-    "Microsoft Translator API": "https://www.microsoft.com/en-us/translator/translatorapi.aspx",
-    "PayPal Express Checkout": "https://www.paypal.com/us/webapps/mpp/express-checkout",
-    "Philips Hue API": "https://www.developers.meethue.com/",
-    "Plug.dj API": "http://support.plug.dj/hc/en-us/categories/200123567-API",
-    "Steam Web API": "https://developer.valvesoftware.com/wiki/Steam_Web_API",
-    "Yo API": "http://docs.justyo.co/",
-    "YouTube API": "https://www.youtube.com/yt/dev/api-resources.html"
   }
 }

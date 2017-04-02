@@ -34,28 +34,28 @@ section {
   padding: 18vh 10vw 10vh 10vw;
   background-position: center center;
   background-size: cover;
-  
+
   &.landing {
     height: 78vh;
     padding: 22vh 10vw 0 10vw;
     background-image: url('../images/backgrounds/turntable.jpg');
   }
-  
+
   &.about-me {
     background-image: url('../images/backgrounds/tiger.jpg');
-    
+
     p {
       font-size: 3vw;
     }
   }
-  
+
   &.skills {
     background-image: url('../images/backgrounds/code.jpg');
   }
-  
+
   &.projects {
     background-image: url('../images/backgrounds/fans.jpg');
-    
+
     p {
       font-size: 3vw;
     }
@@ -65,11 +65,11 @@ section {
 .links {
   padding-top: 8vh;
   font-size: 2.5vw;
-  
+
   .link + .link {
     padding-left: 4vw;
   }
-  
+
   i {
     padding-right: 0.5vw;
   }
@@ -112,7 +112,7 @@ h1 {
   letter-spacing: 1px;
   text-transform: uppercase;
   opacity: 0.8;
-  
+
   small {
     font-size: 4vw;
   }
