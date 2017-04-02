@@ -1,17 +1,16 @@
 var gulp         = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync  = require('browser-sync').create(),
+    fs           = require('fs'),
     htmlmin      = require('gulp-htmlmin'),
     nunjucks     = require('gulp-nunjucks-render'),
     sass         = require('gulp-sass'),
-    sourcemaps   = require('gulp-sourcemaps'),
-    projectData  = require('./source/data/projects.json');
+    sourcemaps   = require('gulp-sourcemaps');
 
 gulp.task('build-html', function() {
+  var projectData = JSON.parse(fs.readFileSync('./source/data/projects.json'));
   return gulp.src('source/html/*.html')
-    .pipe(nunjucks({
-      data: projectData
-    }))
+    .pipe(nunjucks({ data: projectData }))
     .pipe(htmlmin({
       collapseBooleanAttributes: true,
       collapseWhitespace: true,
