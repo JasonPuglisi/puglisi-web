@@ -1,12 +1,31 @@
 # Puglisi Web
 
-Jason Puglisi's personal website. Current version codename: Focus
+Portfolio and informational website of Jason Puglisi.
 
-## Development & Hosting
+Current revision uses the design codenamed Focus.
 
-Make sure you have [Node.js](https://nodejs.org/) installed, and run
-`npm install -g gulp` followed by `npm install` in the root directory.
+## Usage
 
-For development and browser live-reloading, run `gulp`. To only build the
-source files for hosting, run `gulp build`. Your web server should serve
-static files from the `public` directory.
+Run `npm install -g gulp` followed by `npm install` to install the
+dependencies. For development and browser live-reloading, run `gulp`.
+To only build the source files for hosting, run `gulp build`.
+
+Your web server should serve static files from the [`public`](public)
+directory.
+
+Projects can be added to
+[`source/data/projects.json`](source/data/projects.json) for easy
+extensibility.
+
+## Overview
+
+Features an immersive single-page design to showcase personal information,
+skills, and projects. Projects each have their own section with a teaser
+screenshot in the background.
+
+Projects with source code hosted on GitHub have their star count updated
+dynamically and displayed in their sections. All projects and details about
+them are loaded from a file for easy additions and modifications.
+
+The site uses minimal resources after building, and does not use a CSS
+framework.
