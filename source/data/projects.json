@@ -78,7 +78,6 @@
     "rville-spirit": {
       "name": "Rville Spirit",
       "links": {
-        "Web": "https://www.rvillespirit.com/",
         "GitHub": "https://github.com/JasonPuglisi/rville-spirit-website"
       },
       "description": "An online apparel store for Robbinsville High School that manipulates embed code from PayPal Express Checkout to create a simple user-friendly interface. Products are stored in a database for easy additions and modifications.",
