@@ -1,6 +1,6 @@
 /* TEAM */
 
-Jason Puglisi <jason@puglisi.im>
+Jason Puglisi <hello@jasonpuglisi.com>
 Github: JasonPuglisi
 Location: Rochester, NY
 
