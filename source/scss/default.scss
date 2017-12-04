@@ -61,12 +61,12 @@ section {
 .links {
   padding-top: 8vh;
   font-size: 4.62vw;
-
-  .link + .link {
-    padding-left: 4vw;
-  }
+  line-height: 1.3em;
 
   .link {
+    padding-right: 4vw;
+    white-space: nowrap;
+
     i {
       padding-right: 0.5vw;
     }
@@ -74,6 +74,10 @@ section {
     small {
       font-size: 3vw;
     }
+  }
+
+  .link:last-of-type {
+    padding-right: 0;
   }
 }
 
