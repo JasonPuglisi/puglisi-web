@@ -2,6 +2,7 @@ node_modules/
 public/*
 !public/favicon.ico
 !public/humans.txt
+!public/pens.txt
 !public/robots.txt
 !public/sitemap.xml
 !public/assets
