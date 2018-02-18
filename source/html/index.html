@@ -31,14 +31,14 @@
       <h1>About Me</h1>
       <p>I'm a Computing Security Student at Rochester Institute of
         Technology.</p>
-      <p>I like to manage servers, play piano, listen to records, watch
-        hockey, and collect fountain pens. I'm a big fan of Game of Thrones and
-        Silicon Valley.</p>
+      <p>I like to scuba dive, play piano, listen to records, watch hockey, and
+        collect fountain pens. I'm a big fan of Game of Thrones and Silicon
+        Valley.</p>
     </section>
     <section class="skills" id="skills">
       <h1>Skills</h1>
       <p>I learn new programming languages quickly, and I have experience in
-        Java, Go, C, MIPS, PHP, JavaScript, Bash, and MySQL.</p>
+        Java, Go, C, C#, MIPS, PHP, JavaScript, Bash, and MySQL.</p>
       <p>I'm proficient with VMWare, Wireshark, Nmap, Metasploit, Git, SSH,
         FTP, IRC, and more.</p>
       <p>I've worked with macOS, Linux, Windows, and Cisco IOS.</p>
@@ -72,7 +72,7 @@
         {% elif type == "Firefox Add-on" or type == "Pebble Watchface" %}
         {% set icon = "puzzle-piece" %}
         {% endif %}
-        <span class="link"><i class="fa fa-{{icon}}"></i>&nbsp;<a href="{{ link }}">{{ type }}</a></span>
+        <span class="link"><i class="fa fa-{{icon}}"></i>&nbsp;<a href="{{ link }}">{{ type | replace(" ", "&nbsp") }}</a></span>
         {% endfor %}
       </div>
       {% endif%}
@@ -82,7 +82,7 @@
         <span>Languages:
           {% set comma = joiner() %}
           {% for language in project.languages -%}
-          {{ comma() }} {{ language }}
+          {{ comma() }} {{ language | replace(" ", "&nbsp") }}
           {%- endfor %}
         </span><br>
         {% endif %}
@@ -90,7 +90,7 @@
         <span>Services:
           {% set comma = joiner() %}
           {% for name, link in project.services -%}
-          {{ comma() }} <a href="{{ link }}">{{ name }}</a></span>
+          {{ comma() }} <a href="{{ link }}">{{ name | replace(" ", "&nbsp") }}</a></span>
           {%- endfor %}
         </span>
         {% endif %}

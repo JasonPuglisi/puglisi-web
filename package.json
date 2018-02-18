@@ -1,6 +1,6 @@
 {
   "name": "puglisi-web",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Jason Puglisi's personal website.",
   "repository": {
     "type": "git",
@@ -13,13 +13,13 @@
   },
   "homepage": "https://github.com/JasonPuglisi/puglisi-web#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-htmlmin": "^3.0.0",
-    "gulp-nunjucks-render": "^2.2.1",
+    "gulp-nunjucks-render": "^2.2.2",
     "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^2.6.1",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^2.1.2"
   }
 }

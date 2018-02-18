@@ -19,7 +19,7 @@ a, a:active, a:visited {
 
 a:hover {
   cursor: pointer;
-  color: lighten($primary-color, 10%);
+  color: lighten($primary-color, 20%);
   transition: color 0s;
 }
 
@@ -38,7 +38,7 @@ section {
   &.landing {
     height: 78vh;
     padding: 22vh 10vw 0 10vw;
-    background-image: url('../images/backgrounds/turntable.jpg');
+    background-image: url('../images/backgrounds/water.jpg');
   }
 
   &.about-me {

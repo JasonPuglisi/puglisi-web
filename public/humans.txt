@@ -2,7 +2,7 @@
 
 Jason Puglisi <hello@jasonpuglisi.com>
 Github: JasonPuglisi
-Location: Rochester, NY
+Location: Weston, FL
 
 /* THANKS */
 
@@ -13,4 +13,3 @@ Unsplash: https://unsplash.com/
 /* SITE */
 
 Software: Sketch, Gulp, Atom, Vim
-
