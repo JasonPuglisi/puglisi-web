@@ -1,12 +1,12 @@
 {
   "projects": {
-    "lastfm-now": {
-      "name": "Last.fm Now",
+    "descent": {
+      "name": "Descent",
       "links": {
-        "Web": "https://wagnaria.xyz/now/",
-        "GitHub": "https://github.com/JasonPuglisi/lastfm-now"
+        "Web": "https://descent.live/now/",
+        "GitHub": "https://github.com/JasonPuglisi/descent"
       },
-      "description": "A now playing web app for Last.fm that displays current album art and song details for a user, with the ability to control Philips Hue color lights based on album art colors. Automatically shows current weather and a forecast summary.",
+      "description": "A now playing web app for Last.fm that displays current album art and song details for a user, with the ability to control Philips Hue color lights based on album art colors. Automatically shows current weather.",
       "languages": [
         "JavaScript (Node.js/jQuery/JSON)",
         "HTML/CSS (Pug)"
