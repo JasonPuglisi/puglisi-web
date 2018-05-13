@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- node
+deploy:
+  skip_cleanup: true
+  provider: pages
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: public
+  repo: JasonPuglisi/jasonpuglisi.github.io
+  target-branch: master
+  fqdn: www.jasonpuglisi.com
+  project-name: puglisi-web
+  committer-from-gh: true
+  on:
+    repo: JasonPuglisi/puglisi-web
+    branch: master
+before_deploy:
+- git add -f public public/* public/index.html public/assets/* public/assets/javascripts public/assets/stylesheets
