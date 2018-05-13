@@ -6,5 +6,5 @@ public/*
 !public/robots.txt
 !public/sitemap.xml
 !public/assets
-/public/assets/*
+public/assets/*
 !public/assets/images

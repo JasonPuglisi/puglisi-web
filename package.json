@@ -1,26 +1,31 @@
 {
   "name": "puglisi-web",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Jason Puglisi's personal website.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JasonPuglisi/puglisi-web.git"
-  },
-  "author": "Jason Puglisi <hello@jasonpuglisi.com>",
+  "keywords": [
+    "jason",
+    "puglisi",
+    "portfolio",
+    "personal",
+    "website",
+    "projects"
+  ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/JasonPuglisi/puglisi-web/issues"
+  "homepage": "https://www.jasonpuglisi.com/",
+  "bugs": "https://github.com/JasonPuglisi/puglisi-web/issues",
+  "repository": "github:JasonPuglisi/puglisi-web",
+  "author": "Jason Puglisi <hello@jasonpuglisi.com> (https://www.jasonpuglisi.com)",
+  "scripts": {
+    "test": "scripts/build_and_test.sh"
   },
-  "homepage": "https://github.com/JasonPuglisi/puglisi-web#readme",
+  "private": true,
   "devDependencies": {
-    "browser-sync": "^2.23.6"
-  },
-  "dependencies": {
+    "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-htmlmin": "^4.0.0",
     "gulp-nunjucks-render": "^2.2.2",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0"
   }
