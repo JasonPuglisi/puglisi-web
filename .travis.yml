@@ -16,4 +16,4 @@ deploy:
     repo: JasonPuglisi/puglisi-web
     branch: master
 before_deploy:
-- git add -f public public/* public/index.html public/assets/* public/assets/javascripts public/assets/stylesheets
+- git add -f public public/* public/index.html public/assets/* public/assets/stylesheets
