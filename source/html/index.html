@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="author" content="Jason Puglisi">
-    <meta name="description" content="Jason Puglisi is a security analyst, system administrator, and software developer.">
-    <meta name="keywords" content="jason,puglisi,computer,computing,security,system,network,software,web">
+    <meta name="description" content="Jason Puglisi is a security analyst attending Rochester Institute of Technology.">
+    <meta name="keywords" content="application,computer,computing,information,jason,network,puglisi,security,software,system,web">
     <meta name="viewport" content="width=device-width">
     <title>Jason Puglisi</title>
     <link rel="stylesheet" href="assets/stylesheets/default.css">
@@ -12,92 +12,76 @@
   <body>
     <section class="landing">
       <h1>Jason Puglisi</h1>
-      <h2>security&nbsp;analyst&nbsp;/ system&nbsp;administrator&nbsp;/ software&nbsp;developer</h2>
-      <div class="links">
-        <span class="link">
-          <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:hello@jasonpuglisi.com">hello@jasonpuglisi.com</a>
+      <h2 class="blurbs personal">
+        <span class="blurb">
+          <i class="fas fa-user"></i>&nbsp;Security Analyst
         </span>
-        <span class="link">
-          <i class="fa fa-github"></i>&nbsp;<a href="https://github.com/JasonPuglisi">JasonPuglisi</a>
+        <span class="blurb">
+          <i class="fas fa-envelope"></i>&nbsp;<a href="mailto:hello@jasonpuglisi.com">hello@jasonpuglisi.com</a>
         </span>
-      </div>
+      </h2>
       <div class="quicknav">
-        <a href="#about-me">about&nbsp;me&nbsp;<i class="fa fa-chevron-down"></i></a>
-        <a href="#skills">skills&nbsp;<i class="fa fa-chevron-down"></i></a>
-        <a href="#projects">projects&nbsp;<i class="fa fa-chevron-down"></i></a>
+        <a href="#about">About&nbsp;Me&nbsp;/&nbsp;Skills&nbsp;<i class="fas fa-chevron-circle-down"></i></a>
+        <a href="#affiliations">Affiliations&nbsp;/&nbsp;Events&nbsp;<i class="fas fa-chevron-circle-down"></i></a>
+        <a href="#experience">Work&nbsp;Experience&nbsp;<i class="fas fa-chevron-circle-down"></i></a>
       </div>
     </section>
-    <section class="about-me" id="about-me">
+    <section class="about" id="about">
       <h1>About Me</h1>
-      <p>I'm a Computing Security Student at Rochester Institute of
-        Technology.</p>
-      <p>I like to scuba dive, play piano, listen to records, watch hockey, and
-        collect fountain pens. I'm a big fan of Game of Thrones and Silicon
-        Valley.</p>
+      <p>I'm a Computing Security Student at <a href="https://www.rit.edu/">
+        Rochester Institute of Technology</a>.</p>
+      <p>My hobbies include scuba diving, playing piano, collecting fountain
+        pens, listening to records, and watching hockey.</p>
     </section>
     <section class="skills" id="skills">
       <h1>Skills</h1>
-      <p>I learn new programming languages quickly, and I have experience in
-        Java, Go, C, C#, MIPS, PHP, JavaScript, Bash, and MySQL.</p>
-      <p>I'm proficient with VMWare, Wireshark, Nmap, Metasploit, Git, SSH,
-        FTP, IRC, and more.</p>
-      <p>I've worked with macOS, Linux, Windows, and Cisco IOS.</p>
-    </section>
-    <section class="projects" id="projects">
-      <h1>Projects</h1>
-      <p>I've made web apps, chat bots, browser addons, smartwatch watchfaces,
-        and more. Scroll down for an in-depth look.</p>
-      <p>In a team of five, I participated in multiple cyber defense
-        competitions. With little experience, we debuted at the three-day
-        <a href="https://ists.sparsa.org/">Information Security Talent Search
-        15</a>. We achieved first place out of twelve teams at our second
-        competition <a href="https://lockdown.ubnetdef.org/">Lockdown v2</a>,
-        and first place out of ten teams at our third competition
-        <a href="https://www.facebook.com/events/758642734299952/">IRSeC
-        2017</a>, where I led as team captain.</p>
-      <p>I also participated in the 24-hour hackathon
-        <a href="https://brickhack3.devpost.com/">BrickHack 3</a> with a team
-        of two.</p>
-    </section>
-    {% for id, project in projects %}
-    <section class="project" style="background-image:url('../assets/images/backgrounds/projects/{{ id }}.jpg')">
-      <h1>{{ project.name }}</h1>
-      {% if project.links | length > 0 %}
-      <div class="links">
-        {% for type, link in project.links %}
-        {% if type == "Web" %}
-        {% set icon = "globe" %}
-        {% elif type == "GitHub" %}
-        {% set icon = "github" %}
-        {% elif type == "Firefox Add-on" or type == "Pebble Watchface" %}
-        {% set icon = "puzzle-piece" %}
-        {% endif %}
-        <span class="link"><i class="fa fa-{{icon}}"></i>&nbsp;<a href="{{ link }}">{{ type | replace(" ", "&nbsp") }}</a></span>
-        {% endfor %}
-      </div>
-      {% endif%}
-      <p>{{ project.description }}</p>
       <p>
-        {% if project.languages | length > 0 %}
-        <span>Languages:
-          {% set comma = joiner() %}
-          {% for language in project.languages -%}
-          {{ comma() }} {{ language | replace(" ", "&nbsp") }}
-          {%- endfor %}
-        </span><br>
-        {% endif %}
-        {% if project.services | length > 0 %}
-        <span>Services:
-          {% set comma = joiner() %}
-          {% for name, link in project.services -%}
-          {{ comma() }} <a href="{{ link }}">{{ name | replace(" ", "&nbsp") }}</a></span>
-          {%- endfor %}
-        </span>
-        {% endif %}
+        Software I'm proficient with includes
+        {% for software_piece in skills.software %}
+        {{ 'and' if loop.last }}
+        <a href="{{ software_piece.link }}">{{ software_piece.name }}</a>{{ '.' if loop.last else ',' }}
+        {% endfor %}
       </p>
+      <p>
+          Programming languages I'm most experienced with include
+          {% for programming_language in skills.programmingLanguages %}
+          {{ 'and' if loop.last }}
+          <a href="{{ programming_language.link }}">{{ programming_language.name }}</a>{{ '.' if loop.last else ',' }}
+          {% endfor %}
+        </p>
+    </section>
+    <section class="affiliations" id="affiliations">
+      <h1>Affiliations <small>and Events</small></h1>
+      <p>In a team of five named Lockout, I've participated in multiple
+        network defense competitions. We debuted at the three-day competition
+        Information Security Talent Search 15 during March 2017 before
+        achieving first place at both Lockdown v2 out of twelve teams and IRSeC
+        2017 out of ten teams during the next month.</p>
+      <p>I'm a member and student research mentor in RITSec, Rochester
+        Institute of Technology's computing security club formerly known as RC3
+        and SPARSA. I attended BSidesROC 2017 and DEF CON 26.</p>
+    </section>
+    <a id="experience"></a>
+    {% for company in experience.companies %}
+    <section class="company" style="background-image:url('../assets/images/backgrounds/companies/{{ company.id }}.jpg')">
+      <h1>{{ company.name }}</h1>
+      {% for position in company.positions %}
+      <h2>{{ position.title }}</h2>
+      <h3 class="blurbs">
+        <span class="blurb">
+          <i class="fas fa-map-pin"></i>&nbsp;<a href="{{ position.location.link }}">{{ position.location.name }}</a>
+        </span>
+        <span class="blurb">
+          <i class="fas fa-calendar-alt"></i>&nbsp;{{ position.dates.start }}{{ ' – ' + position.dates.end if not (position.dates.start == position.dates.end) }}
+        </span>
+      </h3>
+      {% set description = position.description %}
+      {% for link in position.links %}
+      {% set description = description | replace('{' + link.name + '}', '<a href="' + link.link + '">' + link.name + '</a>') | safe %}
+      {% endfor %}
+      <p>{{ description }}</p>
+      {% endfor %}
     </section>
     {% endfor %}
-
-    <script src="./assets/javascripts/main.js"></script>
   </body>
 </html>

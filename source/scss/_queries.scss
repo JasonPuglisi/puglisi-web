@@ -7,8 +7,12 @@
     font-size: 13vw;
   }
 
-  h2, .links, .quicknav {
+  h2, .blurbs.personal, .quicknav {
     font-size: 4vw;
+  }
+
+  h3 {
+    font-size: 3vw;
   }
 
   p {
@@ -16,15 +20,17 @@
   }
 
   section {
-    &.about-me {
+    &.about {
       p {
         font-size: 4.0624vw;
       }
     }
-  }
 
-  .links .link small {
-    font-size: 2.6vw;
+    &.affiliations {
+      h1 {
+        font-size: 9vw;
+      }
+    }
   }
 
   .quicknav {
@@ -38,8 +44,12 @@
     font-size: 10vw;
   }
 
-  h2, .links, .quicknav {
+  h2, .blurbs.personal, .quicknav {
     font-size: 3.125vw;
+  }
+
+  h3 {
+    font-size: 2vw;
   }
 
   p {
@@ -47,15 +57,17 @@
   }
 
   section {
-    &.about-me {
+    &.about {
       p {
         font-size: 3.75vw;
       }
     }
-  }
 
-  .links .link small {
-    font-size: 2vw;
+    &.affiliations {
+      h1 {
+        font-size: 8vw;
+      }
+    }
   }
 
   .quicknav {
@@ -69,8 +81,12 @@
     font-size: 8vw;
   }
 
-  h2, .links, .quicknav {
+  h2, .blurbs.personal, .quicknav {
     font-size: 2.5vw;
+  }
+
+  h3 {
+    font-size: 1.6vw;
   }
 
   p {
@@ -78,15 +94,17 @@
   }
 
   section {
-    &.about-me {
+    &.about {
       p {
         font-size: 3vw;
       }
     }
-  }
 
-  .links .link small {
-    font-size: 1.6vw;
+    &.affiliations {
+      h1 {
+        font-size: 7vw;
+      }
+    }
   }
 
   .quicknav {

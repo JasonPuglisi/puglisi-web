@@ -9,9 +9,11 @@ var gulp         = require('gulp'),
     uglify       = require('gulp-uglify');
 
 gulp.task('build-html', function() {
-  var projectData = JSON.parse(fs.readFileSync('./source/data/projects.json'));
+  var skillsData     = JSON.parse(fs.readFileSync('./source/data/skills.json'));
+  var experienceData = JSON.parse(fs.readFileSync('./source/data/experience.json'));
+  var nunjucksData   = { skills: skillsData, experience: experienceData }
   return gulp.src('source/html/*.html')
-    .pipe(nunjucks({ data: projectData }))
+    .pipe(nunjucks({ data: nunjucksData }))
     .pipe(htmlmin({
       collapseBooleanAttributes: true,
       collapseWhitespace: true,
