@@ -1,0 +1,55 @@
+{
+  "companies": [
+    {
+      "id": "zappos-com",
+      "name": "Zappos.com",
+      "positions": [
+        {
+          "title": "Application Security Analysis Intern",
+          "location": {
+            "name": "Las Vegas, NV",
+            "link": "https://goo.gl/maps/J8n519g9qdC2"
+          },
+          "dates": {
+            "start": "June 2018",
+            "end": "August 2018"
+          },
+          "description": "Conducted penetration tests to uncover and report on security flaws using the {OWASP Application Security Verification Standard Project}. Followed {Amazon}'s internal software development lifecycle program to classify and certify applications as secure throughout architecture, development, and deployment. Reproduced and validated issues reported through bug bounty platform {Bugcrowd}.",
+          "links": [
+            {
+              "name": "OWASP Application Security Verification Standard Project",
+              "link": "https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project"
+            },
+            {
+              "name": "Amazon",
+              "link": "https://www.amazon.com/"
+            },
+            {
+              "name": "Bugcrowd",
+              "link": "https://www.bugcrowd.com/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ultimate-software",
+      "name": "Ultimate Software",
+      "positions": [
+        {
+          "title": "Software Engineering Intern",
+          "location": {
+            "name": "Weston, FL",
+            "link": "https://goo.gl/maps/PdmJdG6VR8T2"
+          },
+          "dates": {
+            "start": "January 2018",
+            "end": "June 2018"
+          },
+          "description": "Developed a solution for processing and alerting on suspicious login locations from a large set of streaming events. Interfaced with internal software users to analyze and address critical issues in a timely manner. Taught other developers in areas of personal strength while rapidly adapting to new environments and technologies.",
+          "links": []
+        }
+      ]
+    }
+  ]
+}

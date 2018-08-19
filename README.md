@@ -20,19 +20,14 @@ For development and browser live-reloading, run `gulp`.
 Your web server should serve static files from the [`public`](public)
 directory.
 
-Projects can be added to
-[`source/data/projects.json`](source/data/projects.json) for easy
-extensibility.
+Skills and experience can be added to the [`source/data`](source/data)
+directory for easy extensibility.
 
 ## Overview
 
 Features an immersive single-page design to showcase personal information,
-skills, and projects. Projects each have their own section with a teaser
-screenshot in the background.
-
-Projects with source code hosted on GitHub have their star count updated
-dynamically and displayed in their sections. All projects and details about
-them are loaded from a file for easy additions and modifications.
+skills, and experience. Experiences each have their own section. All skills
+and experiences are loaded from a file for easy additions and modifications.
 
 The site uses minimal resources after building, and does not use a CSS
 framework.

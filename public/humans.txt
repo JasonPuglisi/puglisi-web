@@ -2,7 +2,6 @@
 
 Jason Puglisi <hello@jasonpuglisi.com>
 Github: JasonPuglisi
-Location: Weston, FL
 
 /* THANKS */
 
@@ -12,4 +11,4 @@ Unsplash: https://unsplash.com/
 
 /* SITE */
 
-Software: Sketch, Gulp, Atom, Vim
+Software: Sketch, Visual Studio Code, Vim

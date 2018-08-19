@@ -1,0 +1,66 @@
+{
+  "software": [
+    {
+      "name": "Burp Suite",
+      "link": "https://portswigger.net/burp"
+    },
+    {
+      "name": "Metasploit",
+      "link": "https://www.metasploit.com/"
+    },
+    {
+      "name": "Nmap",
+      "link": "https://nmap.org/"
+    },
+    {
+      "name": "Wireshark",
+      "link": "https://www.wireshark.org/"
+    },
+    {
+      "name": "VMWare",
+      "link": "https://www.vmware.com/"
+    },
+    {
+      "name": "VirtualBox",
+      "link": "https://www.virtualbox.org/"
+    },
+    {
+      "name": "SSH",
+      "link": "https://www.ssh.com/ssh/protocol/"
+    },
+    {
+      "name": "Git",
+      "link": "https://git-scm.com/"
+    }
+  ],
+  "programmingLanguages": [
+    {
+      "name": "Java",
+      "link": "https://java.com/"
+    },
+    {
+      "name": "C#",
+      "link": "https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/"
+    },
+    {
+      "name": "C",
+      "link": "http://www.c-faq.com/"
+    },
+    {
+      "name": "MIPS",
+      "link": "https://www.mips.com/products/architectures/mips32-2/"
+    },
+    {
+      "name": "JavaScript",
+      "link": "https://www.javascript.com/"
+    },
+    {
+      "name": "Bash",
+      "link": "https://www.gnu.org/software/bash/"
+    },
+    {
+      "name": "MySQL",
+      "link": "https://www.mysql.com/"
+    }
+  ]
+}
