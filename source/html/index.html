@@ -12,12 +12,12 @@
   <body>
     <section class="landing">
       <h1>Jason Puglisi</h1>
-      <h2 class="blurbs personal">
-        <span class="blurb">
-          <i class="fas fa-user"></i>&nbsp;Security Analyst
-        </span>
+      <h2 class="blurbs">
         <span class="blurb">
           <i class="fas fa-envelope"></i>&nbsp;<a href="mailto:hello@jasonpuglisi.com">hello@jasonpuglisi.com</a>
+        </span>
+        <span class="blurb">
+          <i class="fab fa-medium"></i>&nbsp;<a href="https://medium.com/@JasonPuglisi">@JasonPuglisi</a>
         </span>
       </h2>
       <div class="quicknav">
@@ -29,7 +29,8 @@
     <section class="about" id="about">
       <h1>About Me</h1>
       <p>I'm a computing security student at <a href="https://www.rit.edu/">
-        Rochester Institute of Technology</a>.</p>
+        Rochester Institute of Technology</a>. My focus in the security
+        industry is penetration testing and application security analysis.</p>
       <p>My hobbies include scuba diving, playing piano, collecting fountain
         pens, glassblowing, listening to records, and watching hockey.</p>
     </section>
@@ -43,23 +44,32 @@
         {% endfor %}
       </p>
       <p>
-          Programming languages I'm most experienced with include
-          {% for programming_language in skills.programmingLanguages %}
-          {{ 'and' if loop.last }}
-          <a href="{{ programming_language.link }}">{{ programming_language.name }}</a>{{ '.' if loop.last else ',' }}
-          {% endfor %}
-        </p>
+        Programming languages I'm most experienced with include
+        {% for programming_language in skills.programmingLanguages %}
+        {{ 'and' if loop.last }}
+        <a href="{{ programming_language.link }}">{{ programming_language.name }}</a>{{ '.' if loop.last else ',' }}
+        {% endfor %}
+      </p>
+      <p>
+        Platforms I'm familiar with include
+        {% for platform in skills.platforms %}
+        {{ 'and' if loop.last }}
+        <a href="{{ platform.link }}">{{ platform.name }}</a>{{ '.' if loop.last else ',' }}
+        {% endfor %}
+      </p>
     </section>
     <section class="affiliations" id="affiliations">
-      <h1>Affiliations <small>and Events</small></h1>
-      <p>In a team of five named Lockout, I've participated in multiple
-        network defense competitions. We debuted at the three-day competition
-        Information Security Talent Search 15 during March 2017 before
-        achieving first place at both Lockdown v2 out of twelve teams and IRSeC
-        2017 out of ten teams during the next month.</p>
+      <h1>Affiliations and Events</h1>
       <p>I'm a member and student research mentor in RITSEC, Rochester
-        Institute of Technology's computing security club formerly known as RC3
-        and SPARSA. I attended BSidesROC 2017 and DEF CON 26.</p>
+        Institute of Technology's computing security club combined from the
+        former RC3 and SPARSA. I attended DEF CON 26.</p>
+      <p>In a team of five, I've participated in multiple network defense
+        competitions. We debuted at the three-day competition Information
+        Security Talent Search 15 during March 2017 before achieving first
+        place at both Lockdown v2 out of twelve teams and IRSeC 2017 out of ten
+        teams during the next month. I placed 13th out of a few hundred
+        participants in the CTF-like competition IBM Vault during September
+        2018.</p>
     </section>
     <a id="experience"></a>
     {% for company in experience.companies %}
