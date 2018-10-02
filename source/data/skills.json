@@ -59,8 +59,22 @@
       "link": "https://www.gnu.org/software/bash/"
     },
     {
-      "name": "MySQL",
-      "link": "https://www.mysql.com/"
+      "name": "SQL",
+      "link": "https://modern-sql.com/standard"
+    }
+  ],
+  "platforms": [
+    {
+      "name": "Amazon Web Services (AWS)",
+      "link": "https://aws.amazon.com/"
+    },
+    {
+      "name": "Google Cloud Platform (GCP)",
+      "link": "https://cloud.google.com/"
+    },
+    {
+      "name": "Cloudflare",
+      "link": "https://www.cloudflare.com/"
     }
   ]
 }
