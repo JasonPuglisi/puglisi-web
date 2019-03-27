@@ -1,16 +1,16 @@
-var gulp         = require('gulp'),
-    autoprefixer = require('gulp-autoprefixer'),
-    browserSync  = require('browser-sync').create(),
-    fs           = require('fs'),
-    htmlmin      = require('gulp-htmlmin'),
-    nunjucks     = require('gulp-nunjucks-render'),
-    sass         = require('gulp-sass'),
-    sourcemaps   = require('gulp-sourcemaps');
+var gulp = require('gulp'),
+  autoprefixer = require('gulp-autoprefixer'),
+  browserSync = require('browser-sync').create(),
+  fs = require('fs'),
+  htmlmin = require('gulp-htmlmin'),
+  nunjucks = require('gulp-nunjucks-render'),
+  sass = require('gulp-sass'),
+  sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('build-html', function() {
-  var skillsData     = JSON.parse(fs.readFileSync('./source/data/skills.json'));
+gulp.task('build-html', function () {
+  var skillsData = JSON.parse(fs.readFileSync('./source/data/skills.json'));
   var experienceData = JSON.parse(fs.readFileSync('./source/data/experience.json'));
-  var nunjucksData   = { skills: skillsData, experience: experienceData }
+  var nunjucksData = { skills: skillsData, experience: experienceData }
   return gulp.src('source/html/*.html')
     .pipe(nunjucks({ data: nunjucksData }))
     .pipe(htmlmin({
@@ -34,7 +34,7 @@ gulp.task('build-html', function() {
     .pipe(gulp.dest('public'));
 });
 
-gulp.task('build-css', function() {
+gulp.task('build-css', function () {
   return gulp.src('source/scss/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -45,24 +45,25 @@ gulp.task('build-css', function() {
     .pipe(gulp.dest('public/assets/stylesheets'));
 });
 
-gulp.task('sync-html', ['build-html'], function() {
+gulp.task('sync-html', gulp.series('build-html', function () {
   browserSync.reload();
-});
+}));
 
-gulp.task('sync-css', ['build-css'], function() {
+gulp.task('sync-css', gulp.series('build-css', function () {
   browserSync.reload();
-});
+}));
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   browserSync.init({
     server: {
       baseDir: 'public'
     }
   });
 
-  gulp.watch('source/scss/*.scss', ['sync-css']);
-  gulp.watch(['source/html/*.html', 'source/data/*.json'], ['sync-html']);
+  gulp.watch('source/scss/*.scss', gulp.series('sync-css'));
+  gulp.watch(['source/html/*.html', 'source/data/*.json'],
+    gulp.series('sync-html'));
 });
 
-gulp.task('build', ['build-html', 'build-css']);
-gulp.task('default', ['build', 'watch']);
+gulp.task('build', gulp.series('build-html', 'build-css'));
+gulp.task('default', gulp.series('build', 'watch'));
