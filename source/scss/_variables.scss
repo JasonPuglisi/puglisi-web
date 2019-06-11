@@ -1,14 +1,20 @@
 /* Color palette */
 
-$orange: #faba66;
-$orange-light: #f6ca92;
+$purple: #7309e2;
+$purple-light: #9c67e6;
 
-$black: #1f1f1f;
-$gray: #70706f;
-$white: #f7f7f7;
+$pink: #d80260;
+$pink-light: #eb5195;
+
+$black: #1c1c1c;
+$gray: #3d384e;
+$white: #ffffff;
 
 /* Color aliases */
 
-$primary-color: $orange;
-$primary-color-light: $orange-light;
+$primary-color: $purple;
+$primary-color-light: $purple-light;
 $primary-color-text: $white;
+
+$secondary-color: $pink;
+$secondary-color-light: $pink-light;

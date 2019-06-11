@@ -12,15 +12,13 @@ body {
 }
 
 a, a:active, a:visited {
+  color: $white;
   text-decoration: none;
-  color: $primary-color;
-  transition: color 0.2s linear;
 }
 
 a:hover {
+  color: lighten($secondary-color-light, 20%);
   cursor: pointer;
-  color: lighten($primary-color, 20%);
-  transition: color 0s;
 }
 
 ::selection {
@@ -30,133 +28,43 @@ a:hover {
 /* Layout styles */
 
 section {
-  min-height: 82vh;
-  padding: 18vh 10vw 10vh 10vw;
-  background-position: center center;
+  background-position: right bottom;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: flex-end;
+  padding: 10vh 8vw;
+  width: 84vw;
 
   &.landing {
-    height: 78vh;
-    padding: 28vh 10vw 0 10vw;
     background-image: url('../images/backgrounds/lanterns.jpg');
   }
-
-  &.about {
-    background-image: url('../images/backgrounds/tiger.jpg');
-  }
-
-  &.skills {
-    background-image: url('../images/backgrounds/code.jpg');
-  }
-
-  &.affiliations {
-    background-image: url('../images/backgrounds/fans.jpg');
-
-    h1 {
-      font-size: 9.1vw;
-    }
-  }
 }
 
-.blurbs {
-  line-height: 1.5em;
-
-  .blurb {
-    padding-right: 4vw;
-    white-space: nowrap;
-
-    i {
-      padding-right: 0.5vw;
-    }
-  }
-
-  .blurb:last-of-type {
-    padding-right: 0;
-  }
-
-  &.personal {
-    text-transform: lowercase;
-  }
-}
-
-.company {
-   p {
-     padding-top: 1em;
-   }
-
-  .blurb {
-    padding-right: 2vw;
-  }
-}
-
-.quicknav {
-  position: absolute;
-  bottom: 0;
-  width: 80vw;
-  display: none;
-  justify-content: space-between;
-  padding-bottom: 9vh;
-  font-size: 4.62vw;
-  text-transform: lowercase;
-
-  a, a:active, a:visited {
-    text-decoration: none;
-    color: $primary-color-light;
-    transition: color 0.2s linear;
-  }
-
-  a:hover {
-    cursor: pointer;
-    color: lighten($primary-color-light, 10%);
-    transition: color 0s;
-  }
-
-  i.fas {
-    font-size: 0.65em;
-    padding-left: 0.2em;
-  }
-}
 
 /* Typography styles */
 
 .font-default {
-  font-weight: 400;
   color: $primary-color-text;
-  font-family: 'Oswald', 'Trebuchet MS', 'Verdana', 'Arial', sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-weight: 300;
 }
 
 h1 {
-  padding-bottom: 2vh;
-  font-weight: 700;
-  font-size: 15.5vw;
-  letter-spacing: 1px;
-  line-height: 1.1em;
   text-transform: uppercase;
-  opacity: 0.8;
+  font-size: 2em;
+  font-weight: 700;
+  padding-bottom: 0.1em;
 }
 
 h2 {
-  padding: 1.5vh 0;
-  font-size: 6vw;
-  line-height: 1.1em;
+  font-size: 0.7em;
 }
 
-h3 {
-  font-size: 4.3vw;
-  line-height: 1.1em;
-}
-
-p {
-  font-size: 5.69vw;
-  line-height: 1.3em;
-}
-
-p + p {
-  padding-top: 1em;
-}
-
-small {
-  font-size: 0.55em;
+.icons {
+  font-size: 0.5em;
+  letter-spacing: 0.14em;
 }
 
 /* Media queries */
