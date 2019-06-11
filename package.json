@@ -1,14 +1,12 @@
 {
   "name": "puglisi-web",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "description": "Jason Puglisi's personal website.",
   "keywords": [
     "jason",
     "puglisi",
-    "portfolio",
     "personal",
-    "website",
-    "projects"
+    "website"
   ],
   "license": "MIT",
   "homepage": "https://www.jasonpuglisi.com/",
@@ -20,11 +18,10 @@
   },
   "private": true,
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-nunjucks-render": "^2.2.3",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5"
   }

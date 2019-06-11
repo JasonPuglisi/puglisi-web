@@ -1,18 +1,12 @@
-var gulp = require('gulp'),
-  autoprefixer = require('gulp-autoprefixer'),
-  browserSync = require('browser-sync').create(),
-  fs = require('fs'),
-  htmlmin = require('gulp-htmlmin'),
-  nunjucks = require('gulp-nunjucks-render'),
-  sass = require('gulp-sass'),
-  sourcemaps = require('gulp-sourcemaps');
+let gulp = require('gulp');
+let autoprefixer = require('gulp-autoprefixer');
+let browserSync = require('browser-sync').create();
+let htmlmin = require('gulp-htmlmin');
+let sass = require('gulp-sass');
+let sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('build-html', function () {
-  var skillsData = JSON.parse(fs.readFileSync('./source/data/skills.json'));
-  var experienceData = JSON.parse(fs.readFileSync('./source/data/experience.json'));
-  var nunjucksData = { skills: skillsData, experience: experienceData }
-  return gulp.src('source/html/*.html')
-    .pipe(nunjucks({ data: nunjucksData }))
+gulp.task('build-html', function (done) {
+  gulp.src('source/html/*.html')
     .pipe(htmlmin({
       collapseBooleanAttributes: true,
       collapseWhitespace: true,
@@ -32,10 +26,12 @@ gulp.task('build-html', function () {
       useShortDoctype: true
     }))
     .pipe(gulp.dest('public'));
+
+  done();
 });
 
-gulp.task('build-css', function () {
-  return gulp.src('source/scss/*.scss')
+gulp.task('build-css', function (done) {
+  gulp.src('source/scss/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compressed'
@@ -43,17 +39,23 @@ gulp.task('build-css', function () {
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('./sourcemaps'))
     .pipe(gulp.dest('public/assets/stylesheets'));
+
+  done();
 });
 
-gulp.task('sync-html', gulp.series('build-html', function () {
+gulp.task('sync-html', gulp.series('build-html', function (done) {
   browserSync.reload();
+
+  done();
 }));
 
-gulp.task('sync-css', gulp.series('build-css', function () {
+gulp.task('sync-css', gulp.series('build-css', function (done) {
   browserSync.reload();
+
+  done();
 }));
 
-gulp.task('watch', function () {
+gulp.task('watch', function (done) {
   browserSync.init({
     server: {
       baseDir: 'public'
@@ -61,8 +63,9 @@ gulp.task('watch', function () {
   });
 
   gulp.watch('source/scss/*.scss', gulp.series('sync-css'));
-  gulp.watch(['source/html/*.html', 'source/data/*.json'],
-    gulp.series('sync-html'));
+  gulp.watch(['source/html/*.html'], gulp.series('sync-html'));
+
+  done();
 });
 
 gulp.task('build', gulp.series('build-html', 'build-css'));

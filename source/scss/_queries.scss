@@ -1,122 +1,43 @@
 /* Media queries */
-/* Based off of Bootstrap responsive breakpoints */
 
-// Bootstrap equivalent: small
+/* Based off Bootstrap breakpoints */
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default
+
+// Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  h1 {
-    font-size: 15vw;
-  }
-
-  h2, .quicknav {
-    font-size: 4.62vw;
-  }
-
-  h3 {
-    font-size: 4vw;
-  }
-
-  p {
-    font-size: 4.69vw;
-  }
-
-  section {
-    &.affiliations {
-      h1 {
-        font-size: 9vw;
-      }
-    }
-  }
 }
 
-// Bootstrap equivalent: medium
+// Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   h1 {
-    font-size: 13vw;
+    font-size: 3em;
   }
 
-  h2, .quicknav {
-    font-size: 4vw;
-  }
-
-  h3 {
-    font-size: 3vw;
-  }
-
-  p {
-    font-size: 3.9vw;
-  }
-
-  section {
-    &.affiliations {
-      h1 {
-        font-size: 8.5vw;
-      }
-    }
-  }
-
-  .quicknav {
-    display: flex;
+  h2 {
+    font-size: 1.1em;
   }
 }
 
-// Bootstrap equivalent: large
+// Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   h1 {
-    font-size: 10vw;
+    font-size: 4em;
   }
 
-  h2, .quicknav {
-    font-size: 3.125vw;
-  }
-
-  h3 {
-    font-size: 2vw;
-  }
-
-  p {
-    font-size: 3vw;
-  }
-
-  section {
-    &.affiliations {
-      h1 {
-        font-size: 8vw;
-      }
-    }
-  }
-
-  .quicknav {
-    display: flex;
+  h2 {
+    font-size: 1.5em;
   }
 }
 
-// Bootstrap equivalent: extra large
+// Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   h1 {
-    font-size: 8vw;
+    font-size: 4.8em;
   }
 
-  h2, .quicknav {
-    font-size: 2.5vw;
-  }
-
-  h3 {
-    font-size: 1.6vw;
-  }
-
-  p {
-    font-size: 2.4vw;
-  }
-
-  section {
-    &.affiliations {
-      h1 {
-        font-size: 7vw;
-      }
-    }
-  }
-
-  .quicknav {
-    display: flex;
+  h2 {
+    font-size: 1.8em;
   }
 }
