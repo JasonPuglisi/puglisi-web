@@ -8,7 +8,10 @@
 
 body {
   @extend .font-default;
-  background-color: $black;
+
+  background-image: url('../images/backgrounds/lanterns.jpg');
+  background-position: center top;
+  background-size: cover;
 }
 
 a, a:active, a:visited {
@@ -28,17 +31,15 @@ a:hover {
 /* Layout styles */
 
 section {
-  background-position: center top;
-  background-size: cover;
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 50vh;
   justify-content: flex-end;
-  padding: 10vh 8vw;
+  padding: 25vh 8vw;
   width: 84vw;
 
   &.landing {
-    background-image: url('../images/backgrounds/lanterns.jpg');
+    background-color: rgba(0, 0, 0, 0.65);
   }
 }
 
@@ -63,7 +64,7 @@ h2 {
 }
 
 .icons {
-  font-size: 0.5em;
+  font-size: 0.65em;
 
   a {
     padding-right: 1em;
