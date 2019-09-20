@@ -28,7 +28,7 @@ a:hover {
 /* Layout styles */
 
 section {
-  background-position: right bottom;
+  background-position: center top;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -64,8 +64,10 @@ h2 {
 
 .icons {
   font-size: 0.5em;
-  letter-spacing: 0.3em;
-  padding-left: 0.3em;
+
+  a {
+    padding-right: 1em;
+  }
 }
 
 /* Media queries */
