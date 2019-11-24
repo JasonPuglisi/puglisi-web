@@ -31,6 +31,7 @@ section {
   display: flex;
   flex-direction: column;
   min-height: 94vh;
+  overflow: hidden;
   padding: 2vh;
   width: calc(100vw-4vh);
 
