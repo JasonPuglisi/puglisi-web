@@ -27,45 +27,42 @@ a:hover {
 
 section {
   background-repeat: repeat;
-  background-size: 3.472vw;
+  background-size: 2vw;
   display: flex;
   flex-direction: column;
   min-height: 94vh;
   padding: 2vh;
   width: calc(100vw-4vh);
 
-  div.photos {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    padding-left: 2.5vw;
-    padding-top: 5.5vh;
+  &.light {
+    background-image: url('../images/backgrounds/dot-light.png');
+    color: $dark-gray;
 
-    div.photos.secondary {
-      display: flex;
-      flex-direction: column;
-      padding-left: 0;
-      padding-top: 0;
-
-      img {
-        height: 12vh;
-        padding-left: 0;
-
-        &:not(:last-of-type) {
-          padding-bottom: 2vh;
-        }
-      }
+    &.glass {
+      background-image: url('../images/backgrounds/triangle-light.png');
     }
 
-    img {
-      height: 40vh;
-      padding-left: 2vh;
+    svg {
+      stroke: $dark-gray;
+    }
+  }
+
+  &.dark {
+    background-image: url('../images/backgrounds/dot-dark.png');
+    color: $cream;
+
+    &.glass {
+      background-image: url('../images/backgrounds/triangle-dark.png');
+    }
+
+    svg {
+      stroke: $cream;
     }
   }
 
   &.splash {
-    min-height: 48vh;
     justify-content: flex-end;
+    min-height: 48vh;
     padding: 25vh 8vw;
     width: 84vw;
   }
@@ -97,21 +94,32 @@ section {
     }
   }
 
-  &.light {
-    background-image: url('../images/backgrounds/dot-light.png');
-    color: $dark-gray;
+  div.photos {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding-left: 2.5vw;
+    padding-top: 2.5vw;
 
-    &.glass {
-      background-image: url('../images/backgrounds/triangle-light.png');
+    div.photos.secondary {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      padding-top: 0;
+
+      img {
+        height: 12vh;
+        padding-left: 0;
+
+        &:not(:last-of-type) {
+          padding-bottom: 2vh;
+        }
+      }
     }
-  }
 
-  &.dark {
-    background-image: url('../images/backgrounds/dot-dark.png');
-    color: $cream;
-
-    &.glass {
-      background-image: url('../images/backgrounds/triangle-dark.png');
+    img {
+      height: 40vh;
+      padding-left: 2vh;
     }
   }
 }
@@ -125,21 +133,22 @@ section {
 }
 
 h1 {
-  padding-bottom: 0.1em;
+  padding-bottom: 0.8em;
 
-  img {
+  svg {
+    stroke-width: 2px;
     width: 50vw;
   }
 }
 
 h2 {
-  font-size: 0.7em;
+  font-size: 2em;
   text-transform: lowercase;
 }
 
 h3 {
-  img {
-    height: 15vh;
+  svg {
+    max-height: 15vh;
     max-width: 85vw;
   }
 }
@@ -154,6 +163,11 @@ p {
   &:first-of-type {
     padding-top: 1.5em;
   }
+}
+
+svg {
+  fill-opacity: 0;
+  stroke-width: 1px;
 }
 
 /* Media queries */
