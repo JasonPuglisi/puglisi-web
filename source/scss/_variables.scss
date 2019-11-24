@@ -1,20 +1,19 @@
 /* Color palette */
 
-$purple: #7309e2;
-$purple-light: #9c67e6;
+$orange: #f2c09b;
+$dark-orange: #f8ad76;
 
-$pink: #d80260;
-$pink-light: #eb5195;
+$green: #c4f5c7;
+$dark-green: #88f590;
 
-$black: #1c1c1c;
-$gray: #3d384e;
-$white: #ffffff;
+$cream: #fcf8ec;
+$gray: #afafaf;
+$dark-gray: #1c1c1c;
 
 /* Color aliases */
 
-$primary-color: $purple;
-$primary-color-light: $purple-light;
-$primary-color-text: $white;
+$primary-color: $orange;
+$primary-color-dark: $dark-orange;
 
-$secondary-color: $pink;
-$secondary-color-light: $pink-light;
+$secondary-color: $green;
+$secondary-color-dark: $dark-green;
