@@ -7,37 +7,260 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+  section {
+    background-size: 2vw;
+    min-height: 90vh;
+
+    div.photos {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin-left: 0;
+      padding-left: 2.5vw;
+      padding-top: 2.5vw;
+      width: auto;
+
+      div.photos.secondary {
+        flex-direction: column;
+        padding-bottom: 2vw;
+
+        a, img {
+          max-height: 12vh;
+          max-width: auto;
+
+          &:not(:last-of-type) {
+            padding-bottom: 2vh;
+            padding-right: 0;
+          }
+        }
+      }
+
+      img {
+        max-height: 40vh;
+        max-width: auto;
+        padding-left: 2vh;
+      }
+    }
+  }
+
+  h1 {
+    svg {
+      stroke-width: 2px;
+      width: 70vw;
+    }
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  h3 {
+    svg {
+      max-height: 15vh;
+      max-width: 85vw;
+    }
+  }
+
+  p {
+    font-size: 1.6em;
+    width: 65vw;
+  }
+
+  svg {
+    stroke-width: 1px;
+  }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  section {
+    background-size: 2vw;
+    min-height: 90vh;
+
+    div.photos {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin-left: 0;
+      padding-left: 2.5vw;
+      padding-top: 2.5vw;
+      width: auto;
+
+      div.photos.secondary {
+        flex-direction: column;
+        padding-bottom: 2vw;
+
+        a, img {
+          max-height: 12vh;
+          max-width: auto;
+
+          &:not(:last-of-type) {
+            padding-bottom: 2vh;
+            padding-right: 0;
+          }
+        }
+      }
+
+      img {
+        max-height: 40vh;
+        max-width: auto;
+        padding-left: 2vh;
+      }
+    }
+  }
+
   h1 {
-    font-size: 3em;
+    svg {
+      stroke-width: 2px;
+      width: 65vw;
+    }
   }
 
   h2 {
-    font-size: 1.1em;
+    font-size: 1.8em;
+  }
+
+  h3 {
+    svg {
+      max-height: 15vh;
+      max-width: 85vw;
+    }
+  }
+
+  p {
+    font-size: 1.6em;
+    width: 45vw;
+  }
+
+  svg {
+    stroke-width: 1px;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+  section {
+    background-size: 2vw;
+    min-height: 90vh;
+
+    div.photos {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin-left: 0;
+      padding-left: 2.5vw;
+      padding-top: 2.5vw;
+      width: auto;
+
+      div.photos.secondary {
+        flex-direction: column;
+        padding-bottom: 2vw;
+
+        a, img {
+          max-height: 12vh;
+          max-width: auto;
+
+          &:not(:last-of-type) {
+            padding-bottom: 2vh;
+            padding-right: 0;
+          }
+        }
+      }
+
+      img {
+        max-height: 40vh;
+        max-width: auto;
+        padding-left: 2vh;
+      }
+    }
+  }
+
   h1 {
-    font-size: 4em;
+    svg {
+      stroke-width: 2px;
+      width: 50vw;
+    }
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 2em;
+  }
+
+  h3 {
+    svg {
+      max-height: 15vh;
+      max-width: 85vw;
+    }
+  }
+
+  p {
+    font-size: 1.9em;
+    width: 45vw;
+  }
+
+  svg {
+    stroke-width: 1px;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+  section {
+    background-size: 2vw;
+    min-height: 90vh;
+
+    div.photos {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin-left: 0;
+      padding-left: 2.5vw;
+      padding-top: 2.5vw;
+      width: auto;
+
+      div.photos.secondary {
+        flex-direction: column;
+        padding-bottom: 2vw;
+
+        a, img {
+          max-height: 12vh;
+          max-width: auto;
+
+          &:not(:last-of-type) {
+            padding-bottom: 2vh;
+            padding-right: 0;
+          }
+        }
+      }
+
+      img {
+        max-height: 40vh;
+        max-width: auto;
+        padding-left: 2vh;
+      }
+    }
+  }
+
   h1 {
-    font-size: 4.8em;
+    svg {
+      stroke-width: 2px;
+      width: 50vw;
+    }
   }
 
   h2 {
-    font-size: 1.8em;
+    font-size: 2em;
+  }
+
+  h3 {
+    svg {
+      max-height: 15vh;
+      max-width: 85vw;
+    }
+  }
+
+  p {
+    font-size: 2.2em;
+    width: 45vw;
+  }
+
+  svg {
+    stroke-width: 1px;
   }
 }

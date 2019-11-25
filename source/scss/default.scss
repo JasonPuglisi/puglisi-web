@@ -1,45 +1,133 @@
 /* Sass imports */
 
 @import 'reset';
-@import 'external';
 @import 'variables';
 
 /* Universal styles */
 
 body {
   @extend .font-default;
-
-  background-image: url('../images/backgrounds/lanterns.jpg');
-  background-position: center top;
-  background-size: cover;
 }
 
 a, a:active, a:visited {
-  color: $white;
+  color: $primary-color;
   text-decoration: none;
 }
 
 a:hover {
-  color: lighten($secondary-color-light, 20%);
+  color: $primary-color-dark;
   cursor: pointer;
 }
 
 ::selection {
-  background: lighten($primary-color-light, 20%);
+  background: lighten($primary-color, 10%);
 }
 
 /* Layout styles */
 
 section {
+  background-repeat: repeat;
+  background-size: 5vw;
   display: flex;
   flex-direction: column;
-  height: 50vh;
-  justify-content: flex-end;
-  padding: 25vh 8vw;
-  width: 84vw;
+  min-height: 60vh;
+  overflow: hidden;
+  padding: 4vh 2vh;
+  width: calc(100vw - 4vh);
 
-  &.landing {
-    background-color: rgba(0, 0, 0, 0.65);
+  &.light {
+    background-image: url('../images/backgrounds/dot-light.png');
+    color: $dark-gray;
+
+    &.glass {
+      background-image: url('../images/backgrounds/triangle-light.png');
+    }
+
+    svg {
+      stroke: $dark-gray;
+    }
+  }
+
+  &.dark {
+    background-image: url('../images/backgrounds/dot-dark.png');
+    color: $cream;
+
+    &.glass {
+      background-image: url('../images/backgrounds/triangle-dark.png');
+    }
+
+    svg {
+      stroke: $cream;
+    }
+  }
+
+  &.splash {
+    justify-content: flex-end;
+    min-height: 48vh;
+    padding: 25vh 8vw;
+    width: 84vw;
+  }
+
+  &.profession {
+    a, a:active, a:visited {
+      color: $secondary-color;
+    }
+
+    a:hover {
+      color: $secondary-color-dark;
+    }
+
+    ::selection {
+      background: lighten($secondary-color, 10%);
+    }
+  }
+
+  &.showcase {
+    p {
+      &:first-of-type {
+        font-size: 1.5em;
+        text-transform: lowercase;
+      }
+
+      &:not(:first-of-type) {
+        font-size: 1em;
+      }
+    }
+  }
+
+  div.photos {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    margin-left: -2vh;
+    padding-left: 0;
+    padding-top: 2em;
+    width: calc(100vw + 2vh);
+
+    div.photos.secondary {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 2vw;
+      padding-left: 0;
+      padding-top: 0;
+
+      a, img {
+        max-height: 12vh;
+        max-width: calc(32vw + (2vh / 3));
+        padding-left: 0;
+
+        &:not(:last-of-type) {
+          padding-bottom: 0;
+          padding-right: 2vw;
+        }
+      }
+    }
+
+    img {
+      max-height: 40vh;
+      max-width: 100vw;
+      padding-left: 0;
+    }
   }
 }
 
@@ -47,28 +135,47 @@ section {
 /* Typography styles */
 
 .font-default {
-  color: $primary-color-text;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-  font-weight: 300;
+  font-weight: 700;
 }
 
 h1 {
-  text-transform: uppercase;
-  font-size: 2em;
-  font-weight: 700;
-  padding-bottom: 0.1em;
+  padding-bottom: 0.8em;
+
+  svg {
+    stroke-width: 4px;
+    width: 80vw;
+  }
 }
 
 h2 {
-  font-size: 0.7em;
+  font-size: 1em;
+  text-transform: lowercase;
 }
 
-.icons {
-  font-size: 0.65em;
-
-  a {
-    padding-right: 1em;
+h3 {
+  svg {
+    max-height: 10vh;
+    max-width: 90vw;
   }
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.1em;
+  padding-left: 2.5vw;
+  padding-top: 0.8em;
+  width: 82vw;
+
+  &:first-of-type {
+    padding-top: 1.5em;
+  }
+}
+
+svg {
+  fill-opacity: 0;
+  overflow: visible;
+  stroke-width: 2px;
 }
 
 /* Media queries */
