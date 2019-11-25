@@ -27,13 +27,13 @@ a:hover {
 
 section {
   background-repeat: repeat;
-  background-size: 2vw;
+  background-size: 5vw;
   display: flex;
   flex-direction: column;
-  min-height: 94vh;
+  min-height: 60vh;
   overflow: hidden;
-  padding: 2vh;
-  width: calc(100vw-4vh);
+  padding: 4vh 2vh;
+  width: calc(100vw - 4vh);
 
   &.light {
     background-image: url('../images/backgrounds/dot-light.png');
@@ -97,30 +97,36 @@ section {
 
   div.photos {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    padding-left: 2.5vw;
-    padding-top: 2.5vw;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    margin-left: -2vh;
+    padding-left: 0;
+    padding-top: 2em;
+    width: calc(100vw + 2vh);
 
     div.photos.secondary {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      padding-bottom: 2vw;
       padding-left: 0;
       padding-top: 0;
 
       a, img {
-        height: 12vh;
+        max-height: 12vh;
+        max-width: calc(32vw + (2vh / 3));
         padding-left: 0;
 
         &:not(:last-of-type) {
-          padding-bottom: 2vh;
+          padding-bottom: 0;
+          padding-right: 2vw;
         }
       }
     }
 
     img {
-      height: 40vh;
-      padding-left: 2vh;
+      max-height: 40vh;
+      max-width: 100vw;
+      padding-left: 0;
     }
   }
 }
@@ -137,29 +143,29 @@ h1 {
   padding-bottom: 0.8em;
 
   svg {
-    stroke-width: 2px;
-    width: 50vw;
+    stroke-width: 4px;
+    width: 80vw;
   }
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1em;
   text-transform: lowercase;
 }
 
 h3 {
   svg {
-    max-height: 15vh;
-    max-width: 85vw;
+    max-height: 10vh;
+    max-width: 90vw;
   }
 }
 
 p {
-  font-size: 2.2em;
+  font-size: 1.5em;
   line-height: 1.1em;
   padding-left: 2.5vw;
   padding-top: 0.8em;
-  width: 45vw;
+  width: 82vw;
 
   &:first-of-type {
     padding-top: 1.5em;
@@ -168,7 +174,8 @@ p {
 
 svg {
   fill-opacity: 0;
-  stroke-width: 1px;
+  overflow: visible;
+  stroke-width: 2px;
 }
 
 /* Media queries */
