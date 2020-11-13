@@ -1,6 +1,6 @@
 {
   "name": "puglisi-web",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Jason Puglisi's personal website.",
   "keywords": [
     "jason",
@@ -18,11 +18,11 @@
   },
   "private": true,
   "devDependencies": {
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^2.6.5"
+    "gulp-sourcemaps": "^3.0.0"
   }
 }
