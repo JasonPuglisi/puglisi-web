@@ -59,16 +59,7 @@ section {
     svg {
       stroke: $cream;
     }
-  }
 
-  &.splash {
-    justify-content: flex-end;
-    min-height: 48vh;
-    padding: 25vh 8vw;
-    width: 84vw;
-  }
-
-  &.profession {
     a, a:active, a:visited {
       color: $secondary-color;
     }
@@ -80,6 +71,13 @@ section {
     ::selection {
       background: lighten($secondary-color, 10%);
     }
+  }
+
+  &.splash {
+    justify-content: flex-end;
+    min-height: 48vh;
+    padding: 25vh 8vw;
+    width: 84vw;
   }
 
   &.showcase {
