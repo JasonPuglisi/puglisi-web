@@ -2,18 +2,32 @@ language: node_js
 node_js:
 - node
 deploy:
-  skip_cleanup: true
-  provider: pages
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  local-dir: public
-  repo: JasonPuglisi/jasonpuglisi.github.io
-  target-branch: master
-  fqdn: www.jasonpuglisi.com
-  project-name: puglisi-web
-  committer-from-gh: true
-  on:
-    repo: JasonPuglisi/puglisi-web
-    branch: master
+  - provider: pages
+    skip_cleanup: true
+    keep-history: true
+    local-dir: public
+    github-token: $GITHUB_TOKEN
+    project-name: puglisi-web
+    committer-from-gh: true
+    repo: JasonPuglisi/jasonpuglisi.github.io
+    target-branch: master
+    fqdn: www.jasonpuglisi.com
+    on:
+      repo: JasonPuglisi/puglisi-web
+      branch: master
+  - provider: pages
+    skip_cleanup: true
+    keep-history: true
+    local-dir: public
+    github-token: $GITHUB_TOKEN
+    project-name: puglisi-web
+    committer-from-gh: true
+    repo: JasonPuglisi/alicepuglisi.github.io
+    target-branch: main
+    fqdn: alice.pugli.si
+    on:
+      repo: JasonPuglisi/puglisi-web
+      branch: alice
+
 before_deploy:
 - git add -f public public/* public/index.html public/assets/* public/assets/stylesheets
