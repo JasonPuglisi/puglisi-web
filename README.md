@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/JasonPuglisi/puglisi-web.svg?branch=master)](https://travis-ci.com/JasonPuglisi/puglisi-web)
 
-Jason Puglisi's personal website.
+Alice Puglisi's personal website.
 
 ## Usage
 
