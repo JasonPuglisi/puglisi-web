@@ -12,6 +12,13 @@ body {
 a, a:active, a:focus, a:visited, a:hover {
   color: $primary-color;
   text-decoration: none;
+
+  &.anchor {
+    display: block;
+    position: relative;
+    top: -4vh;
+    visibility: hidden;
+  }
 }
 
 a:hover {
