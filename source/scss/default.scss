@@ -9,7 +9,7 @@ body {
   @extend .font-default;
 }
 
-a, a:active, a:visited {
+a, a:active, a:focus, a:visited, a:hover {
   color: $primary-color;
   text-decoration: none;
 }
@@ -35,7 +35,7 @@ section {
   padding: 4vh 2vh;
   width: calc(100vw - 4vh);
 
-  &.light {
+  &:nth-child(odd) {
     background-image: url('../images/backgrounds/dot-light.png');
     color: $dark-gray;
 
@@ -48,7 +48,7 @@ section {
     }
   }
 
-  &.dark {
+  &:nth-child(even) {
     background-image: url('../images/backgrounds/dot-dark.png');
     color: $cream;
 
@@ -60,12 +60,15 @@ section {
       stroke: $cream;
     }
 
-    a, a:active, a:visited {
+    a, a:active, a:focus, a:visited, a:hover {
       color: $secondary-color;
+      display: inline;
+      padding-bottom: 0px;
     }
 
     a:hover {
       color: $secondary-color-dark;
+      cursor: pointer;
     }
 
     ::selection {

@@ -9,8 +9,8 @@ deploy:
     github-token: $GITHUB_TOKEN
     project-name: puglisi-web
     committer-from-gh: true
-    repo: JasonPuglisi/jasonpuglisi.github.io
-    target-branch: master
+    repo: JasonPuglisi/pages-jason
+    target-branch: main
     fqdn: www.jasonpuglisi.com
     on:
       repo: JasonPuglisi/puglisi-web
@@ -22,7 +22,7 @@ deploy:
     github-token: $GITHUB_TOKEN
     project-name: puglisi-web
     committer-from-gh: true
-    repo: JasonPuglisi/alicepuglisi.github.io
+    repo: JasonPuglisi/pages-alice
     target-branch: main
     fqdn: alice.pugli.si
     on:
