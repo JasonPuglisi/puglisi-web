@@ -14,20 +14,7 @@ deploy:
     fqdn: www.jasonpuglisi.com
     on:
       repo: JasonPuglisi/puglisi-web
-      branch: master
-  - provider: pages
-    skip_cleanup: true
-    keep-history: true
-    local-dir: public
-    github-token: $GITHUB_TOKEN
-    project-name: puglisi-web
-    committer-from-gh: true
-    repo: JasonPuglisi/pages-alice
-    target-branch: main
-    fqdn: alice.pugli.si
-    on:
-      repo: JasonPuglisi/puglisi-web
-      branch: alice
+      branch: main
 
 before_deploy:
 - git add -f public public/* public/index.html public/assets/* public/assets/stylesheets
