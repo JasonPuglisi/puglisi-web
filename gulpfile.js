@@ -63,7 +63,7 @@ gulp.task('watch', function (done) {
   });
 
   gulp.watch('source/scss/*.scss', gulp.series('sync-css'));
-  gulp.watch(['source/html/*.html'], gulp.series('sync-html'));
+  gulp.watch('source/html/*.html', gulp.series('sync-html'));
 
   done();
 });
