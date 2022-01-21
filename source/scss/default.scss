@@ -186,6 +186,10 @@ svg {
   stroke-width: 2px;
 }
 
+/* Block text styles */
+
+@import 'block';
+
 /* Media queries */
 
 @import 'queries';
