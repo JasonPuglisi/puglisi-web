@@ -4,19 +4,21 @@ arch: amd64
 os: linux
 dist: focal
 deploy:
-  - provider: pages
-    keep_history: true
-    local_dir: public
-    token: $GITHUB_TOKEN
-    project_name: puglisi-web
-    committer_from_gh: true
-    strategy: git
-    repo: JasonPuglisi/pages-jason
-    target_branch: main
-    fqdn: www.jasonpuglisi.com
-    on:
-      repo: JasonPuglisi/puglisi-web
-      branch: main
+  skip_cleanup: true
+  cleanup: false
+  provider: pages
+  keep_history: true
+  local_dir: public
+  token: $GITHUB_TOKEN
+  project_name: puglisi-web
+  committer_from_gh: true
+  strategy: git
+  repo: JasonPuglisi/pages-jason
+  target_branch: main
+  fqdn: www.jasonpuglisi.com
+  on:
+    repo: JasonPuglisi/puglisi-web
+    branch: main
 
 before_deploy:
 - git add -f public public/* public/index.html public/assets/* public/assets/stylesheets
