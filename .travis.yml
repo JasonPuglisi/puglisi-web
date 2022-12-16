@@ -2,17 +2,17 @@ language: node_js
 node_js: lts/*
 arch: amd64
 os: linux
-dist: jammy
+dist: focal
 deploy:
   - provider: pages
-    skip_cleanup: true
-    keep-history: true
-    local-dir: public
-    github-token: $GITHUB_TOKEN
-    project-name: puglisi-web
-    committer-from-gh: true
+    keep_history: true
+    local_dir: public
+    token: $GITHUB_TOKEN
+    project_name: puglisi-web
+    committer_from_gh: true
+    strategy: git
     repo: JasonPuglisi/pages-jason
-    target-branch: main
+    target_branch: main
     fqdn: www.jasonpuglisi.com
     on:
       repo: JasonPuglisi/puglisi-web
