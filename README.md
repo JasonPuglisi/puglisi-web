@@ -1,6 +1,6 @@
 # Puglisi Web
 
-[![Build Status](https://travis-ci.com/JasonPuglisi/puglisi-web.svg?branch=master)](https://travis-ci.com/JasonPuglisi/puglisi-web)
+[![Deploy to GitHub Pages](https://github.com/JasonPuglisi/puglisi-web/actions/workflows/deploy-pages.yml/badge.svg?branch=main)](https://github.com/JasonPuglisi/puglisi-web/actions/workflows/deploy-pages.yml)
 
 Jason Puglisi's personal website.
 
