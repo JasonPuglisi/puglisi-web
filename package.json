@@ -1,6 +1,6 @@
 {
   "name": "puglisi-web",
-  "version": "3.2.6",
+  "version": "3.3.0",
   "description": "Jason Puglisi's personal website.",
   "keywords": [
     "jason",
@@ -9,10 +9,10 @@
     "website"
   ],
   "license": "MIT",
-  "homepage": "https://www.jasonpuglisi.com/",
+  "homepage": "https://pugli.si/",
   "bugs": "https://github.com/JasonPuglisi/puglisi-web/issues",
   "repository": "github:JasonPuglisi/puglisi-web",
-  "author": "Jason Puglisi <hello@jasonpuglisi.com> (https://www.jasonpuglisi.com)",
+  "author": "Jason Puglisi <jason@pugli.si> (https://pugli.si)",
   "scripts": {
     "test": "scripts/build_and_test.sh"
   },
