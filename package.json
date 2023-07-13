@@ -1,6 +1,6 @@
 {
   "name": "puglisi-web",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "description": "Jason Puglisi's personal website.",
   "keywords": [
     "jason",
@@ -24,7 +24,7 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "sass": "^1.63.4"
+    "sass": "^1.63.6"
   },
   "dependencies": {}
 }
