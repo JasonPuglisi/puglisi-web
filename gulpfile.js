@@ -1,9 +1,13 @@
-let gulp = require('gulp');
-let autoprefixer = require('gulp-autoprefixer');
-let browserSync = require('browser-sync').create();
-let htmlmin = require('gulp-htmlmin');
-let sass = require('gulp-sass')(require('sass'));
-let sourcemaps = require('gulp-sourcemaps');
+import gulp from 'gulp';
+import autoprefixer from 'gulp-autoprefixer';
+import browserSync from 'browser-sync';
+import htmlmin from 'gulp-htmlmin';
+import gulpSass from 'gulp-sass';
+import sass from 'sass';
+import sourcemaps from 'gulp-sourcemaps';
+
+let browserSyncInstance = browserSync.create();
+let sassInstance = gulpSass(sass);
 
 gulp.task('build-html', function (done) {
   gulp.src('source/html/*.html')
@@ -33,9 +37,9 @@ gulp.task('build-html', function (done) {
 gulp.task('build-css', function (done) {
   gulp.src('source/scss/*.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass({
+    .pipe(sassInstance({
       outputStyle: 'compressed'
-    }).on('error', sass.logError))
+    }).on('error', sassInstance.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('./sourcemaps'))
     .pipe(gulp.dest('public/assets/stylesheets'));
@@ -44,19 +48,19 @@ gulp.task('build-css', function (done) {
 });
 
 gulp.task('sync-html', gulp.series('build-html', function (done) {
-  browserSync.reload();
+  browserSyncInstance.reload();
 
   done();
 }));
 
 gulp.task('sync-css', gulp.series('build-css', function (done) {
-  browserSync.reload();
+  browserSyncInstance.reload();
 
   done();
 }));
 
 gulp.task('watch', function (done) {
-  browserSync.init({
+  browserSyncInstance.init({
     server: {
       baseDir: 'public'
     }

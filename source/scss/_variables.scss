@@ -1,21 +1,17 @@
 /* Color palette */
 
-$orange: #f2c09b;
-$dark-orange: #f8ad76;
+$light-gray: #9f9f9f;
+$gray: #7a7a7a;
 
-$orangered: #ff8878;
-$dark-orangered: #fc563f;
-
-$green: #c4f5c7;
-$dark-green: #88f590;
+$very-light-gray: #bdbdbd;
 
 $cream: #fcf8ec;
 $dark-gray: #1c1c1c;
 
 /* Color aliases */
 
-$primary-color: $orange;
-$primary-color-dark: $dark-orange;
+$primary-color: $light-gray;
+$primary-color-dark: $gray;
 
-$secondary-color: $orangered;
-$secondary-color-dark: $dark-orangered;
+$secondary-color: $very-light-gray;
+$secondary-color-dark: $light-gray;
