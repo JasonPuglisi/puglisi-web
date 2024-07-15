@@ -3,7 +3,7 @@ import autoprefixer from 'gulp-autoprefixer';
 import browserSync from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import gulpSass from 'gulp-sass';
-import sass from 'sass';
+import * as sass from 'sass';
 import sourcemaps from 'gulp-sourcemaps';
 
 let browserSyncInstance = browserSync.create();
