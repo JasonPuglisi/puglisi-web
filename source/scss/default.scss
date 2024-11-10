@@ -1,7 +1,9 @@
 /* Sass imports */
 
-@import 'reset';
-@import 'variables';
+@use 'sass:color';
+@use 'sass:meta';
+@use 'reset';
+@use 'variables';
 
 /* Universal styles */
 
@@ -10,7 +12,7 @@ body {
 }
 
 a, a:active, a:focus, a:visited, a:hover {
-  color: $primary-color;
+  color: variables.$primary-color;
   text-decoration: none;
 
   &.anchor {
@@ -22,12 +24,12 @@ a, a:active, a:focus, a:visited, a:hover {
 }
 
 a:hover {
-  color: $primary-color-dark;
+  color: variables.$primary-color-dark;
   cursor: pointer;
 }
 
 ::selection {
-  background: lighten($primary-color, 10%);
+  background: color.adjust(variables.$primary-color, $lightness: 10%);
 }
 
 /* Layout styles */
@@ -44,42 +46,42 @@ section {
 
   &:nth-child(odd) {
     background-image: url('../images/backgrounds/dot-light.png');
-    color: $dark-gray;
+    color: variables.$dark-gray;
 
     &.glass {
       background-image: url('../images/backgrounds/triangle-light.png');
     }
 
     svg {
-      stroke: $dark-gray;
+      stroke: variables.$dark-gray;
     }
   }
 
   &:nth-child(even) {
     background-image: url('../images/backgrounds/dot-dark.png');
-    color: $cream;
+    color: variables.$cream;
 
     &.glass {
       background-image: url('../images/backgrounds/triangle-dark.png');
     }
 
     svg {
-      stroke: $cream;
+      stroke: variables.$cream;
     }
 
     a, a:active, a:focus, a:visited, a:hover {
-      color: $secondary-color;
+      color: variables.$secondary-color;
       display: inline;
       padding-bottom: 0px;
     }
 
     a:hover {
-      color: $secondary-color-dark;
+      color: variables.$secondary-color-dark;
       cursor: pointer;
     }
 
     ::selection {
-      background: lighten($secondary-color, 10%);
+      background: color.adjust(variables.$secondary-color, $lightness: 10%);
     }
   }
 
@@ -188,4 +190,4 @@ svg {
 
 /* Media queries */
 
-@import 'queries';
+@include meta.load-css('queries');
